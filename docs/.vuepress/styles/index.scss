@@ -1,0 +1,34 @@
+.page table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: auto;
+}
+
+.page .contributor-table{
+  width: 70% ; 
+  tr {
+     border-top: 0px !important ;
+    td {
+       border: 0px !important ;
+    }
+  }
+}
+
+.home{
+  padding: 0px !important ;
+
+  .features{
+    border-top: 0px ;
+  }
+
+  .hero .action-button{
+    border-bottom: 0px;
+  }
+}
+
+:root {
+  --nprogress-color: var(--c-text-accent);
+  --nprogress-z-index: 1031;
+}
