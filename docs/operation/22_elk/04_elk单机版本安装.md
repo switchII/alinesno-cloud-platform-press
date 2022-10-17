@@ -5,6 +5,25 @@
 - ELK 单机版本安装
 - 启动并配置 logstash 配置(此处只为 demo)
 
+## docker快速体验
+
+以下快速体验只为开发过程临时使用，数据未做安全配置，方便用于开发过程
+
+```sh
+docker run \
+    --name acp-es  \
+    --restart always -d \
+    -p 9200:9200 \
+    -p 9300:9300 \
+    -v /mnt/elasticsearch/data:/usr/share/elasticsearch/data \
+    -e "discovery.type=single-node" elasticsearch:7.16.2
+```
+
+以上配置，数据库的数据映射到本地`/mnt/elasticsearch/data`目录下，查看运行状态
+```sh
+docker ps | grep elasticsearch
+```
+
 ## elk 安装
 
 ### 说明
