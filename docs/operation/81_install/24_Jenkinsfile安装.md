@@ -84,7 +84,7 @@ environment {
     kubectl create namespace alinesno-cloud-platform
 
     # 创建空间docker-密钥
-    kubectl create secret docker-registry regsecret \
+    kubectl create secret docker-registry docker-login \
         --docker-server='registry.cn-shenzhen.aliyuncs.com' \
         --docker-username='用户名' \
         --docker-password='密码' \
