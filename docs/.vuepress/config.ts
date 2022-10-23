@@ -321,11 +321,11 @@ export default defineUserConfig({
           collapsible: true,
           children: genFrameworkSidebar()
         },
-        {
-          text: '项目规划',
-          collapsible: true,
-          children: genPlanSidebar()
-        },
+        // {
+        //   text: '项目规划',
+        //   collapsible: true,
+        //   children: genPlanSidebar()
+        // },
         // {
         //   text: '项目管理',
         //   collapsible: true,
@@ -1471,8 +1471,8 @@ function genPlatformBusinessSidebar(type) {
     // mapArr = ['/platform/business/02_产品体系.md']
   } else if (type == 2) {
     mapArr = [
-      '/platform/business/12_技术中台/01_微服务研发引擎.md',
-      '/platform/business/12_技术中台/01_前端框架引擎.md'
+      '/platform/business/12_技术中台/01_微服务研发引擎.md'
+      // '/platform/business/12_技术中台/01_前端框架引擎.md'
       // '/platform/business/12_技术中台/02_DevOps研发体系.md'
     ]
   } else if (type == 3) {
@@ -1764,15 +1764,15 @@ function genFrameworkSidebar() {
   })
 }
 
-function genPlanSidebar() {
-  const mapArr = [
-    '/framework/advanced/01_项目结构设计.md',
-    '/framework/advanced/02_基础模块设计.md'
-  ]
-  return mapArr.map(i => {
-    return i
-  })
-}
+// function genPlanSidebar() {
+//   const mapArr = [
+//     '/framework/advanced/01_项目结构设计.md',
+//     '/framework/advanced/02_基础模块设计.md'
+//   ]
+//   return mapArr.map(i => {
+//     return i
+//   })
+// }
 
 function genManagerSidebar() {
   const mapArr = [
