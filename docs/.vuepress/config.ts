@@ -382,34 +382,24 @@ export default defineUserConfig({
           children: genPlatformBusinessSidebar(1)
         },
         {
-          text: '技术平台',
-          collapsible: true,
-          children: genPlatformPaaSSidebar()
-        },
-        {
-          text: '微服务引擎',
+          text: '技术引擎',
           collapsible: true,
           children: genPlatformBusinessSidebar(2)
         },
         {
-          text: '研发中台',
+          text: '基础服务',
           collapsible: true,
           children: genPlatformBusinessSidebar(3)
         },
         {
-          text: '数据中台',
+          text: '数据治理',
           collapsible: true,
           children: genPlatformBusinessSidebar(5)
         },
         {
-          text: '自动化运维',
+          text: '运维监控',
           collapsible: true,
           children: genPlatformBusinessSidebar(6)
-        },
-        {
-          text: '辅助工具',
-          collapsible: true,
-          children: genPlatformBusinessSidebar(8)
         }
       ],
       '/solution/': [
@@ -1256,19 +1246,6 @@ function genConnectListSidebar() {
 }
 
 /**
- * 中台搭建菜单列表
- * @returns
- */
-function genPlatformPaaSSidebar() {
-  const mapArr = [
-    '/platform/paas/01_持续集成平台.md'
-  ]
-  return mapArr.map(i => {
-    return i
-  })
-}
-
-/**
  * 技术平台
  */
 function genPlatformBusinessSidebar(type) {
@@ -1277,7 +1254,8 @@ function genPlatformBusinessSidebar(type) {
   if (type == 1) {
   } else if (type == 2) {
     mapArr = [
-      '/platform/business/12_技术中台/01_微服务研发引擎.md'
+      '/platform/business/12_技术中台/01_微服务研发引擎.md',
+      '/platform/business/19_业务中台/01_代码生成脚手架.md'
     ]
   } else if (type == 3) {
     mapArr = [
@@ -1289,34 +1267,17 @@ function genPlatformBusinessSidebar(type) {
       '/platform/business/13_研发中台/11_单点登陆管理平台.md',
       '/platform/business/13_研发中台/14_CMS内容管理平台.md'
     ]
-  } else if (type == 4) {
-    mapArr = [
-      '/platform/business/15_物联网中台/01_网关服务平台.md',
-      '/platform/business/15_物联网中台/02_物联网管理平台.md'
-    ]
   } else if (type == 5) {
     mapArr = [
       '/platform/business/14_数据中台/06_数据上报服务.md',
-      '/platform/business/14_数据中台/01_ETL在线调试平台.md',
       '/platform/business/14_数据中台/09_数据集成服务.md',
       '/platform/business/14_数据中台/07_主数据管理服务.md',
       '/platform/business/14_数据中台/08_数据开发服务.md'
     ]
   } else if (type == 6) {
     mapArr = [
-      '/platform/business/18_运维中台/12_自动化运维体系.md',
       '/platform/business/18_运维中台/01_审计日志监控平台.md',
       '/platform/business/18_运维中台/02_Ansible自动化操作平台.md'
-    ]
-  } else if (type == 7) {
-    mapArr = [
-      '/platform/business/16_视觉中台/01_视觉模型训练平台.md',
-      '/platform/business/16_视觉中台/02_视觉目标检测平台.md',
-      '/platform/business/16_视觉中台/03_天网视频流分析平台.md'
-    ]
-  } else if (type == 8) {
-    mapArr = [
-      '/platform/business/19_业务中台/01_代码生成脚手架.md'
     ]
   }
 
@@ -1510,7 +1471,7 @@ function genDesignSidebar(menus) {
  * @returns
  */
 function genFrameworkAboutSidebar() {
-  const mapArr = ['/framework/', '/framework/plan.md']
+  const mapArr = ['/framework/']
   return mapArr.map(i => {
     return i
   })
@@ -1801,16 +1762,19 @@ function genSolutionSidebar(menus) {
   } else if (menus == 2) {
     // 平台架构
     const mapArr = [
-      '18_SaaS平台解决方案.md',
-      '19_技术中台解决方案.md',
-      '20_企业数字化转型解决方案.md',
-      '21_企业信息孤岛解决方案.md',
-      '22_统一身份认证解决方案.md',
-      '23_微服务技术解决方案.md',
-      '09_传统业务升级中台解决方案.md',
-      '24_业务中台解决方案.md',
-      '25_云原生云平台解决方案.md',
-      '26_中台系统建设解决方案.md'
+        '/solution/09_传统业务升级中台解决方案.md',
+        '/solution/18_SaaS平台解决方案.md',
+        '/solution/19_技术中台解决方案.md',
+        '/solution/20_企业数字化转型解决方案.md',
+        '/solution/21_企业信息孤岛解决方案.md',
+        '/solution/22_统一身份认证解决方案.md',
+        '/solution/23_微服务技术解决方案.md',
+        '/solution/24_业务中台解决方案.md',
+        '/solution/25_云原生云平台解决方案.md',
+        '/solution/26_中台系统建设解决方案.md',
+        '/solution/27_数据采集治理方案.md',
+        '/solution/28_数据开放平台治理方案.md',
+        '/solution/29_轻量级数据治理方案.md'
     ]
 
     return mapArr.map(i => {
@@ -1957,3 +1921,18 @@ function genDataOpenSidebar(){
   })
 
 }
+
+/**
+ * 处理解决方案菜单列表
+ * @returns
+ */
+function genSolutionPlatformSidebar() {
+  const mapArr = [
+    '/display/'
+  ]
+
+  return mapArr.map(i => {
+    return i
+  })
+}
+
