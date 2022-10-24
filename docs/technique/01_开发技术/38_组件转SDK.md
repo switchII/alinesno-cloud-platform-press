@@ -7,7 +7,7 @@
 
 ## SDK 架构设计
 
-<img :src="$withBase('/technique/sdk_02.png')">
+<img :src="$withBase('/technique/sdk_02.png')" style="width:70%" >
 
 #### 架构说明
 

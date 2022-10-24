@@ -1,6 +1,6 @@
 # Prometheus 监控
 
-<p class="show-images"><img src="/images/undraw_winter_designer_a2m7.svg" width="40%" /></p>
+<!-- <p class="show-images"><img src="/images/undraw_winter_designer_a2m7.svg" width="40%" /></p> -->
 
 ## 概述
 

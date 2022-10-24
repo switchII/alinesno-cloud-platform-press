@@ -94,7 +94,7 @@ export default defineUserConfig({
   ],
 
   theme: localTheme({
-    logo: '/logo_1.png', // 注意图片放在 public 文件夹下
+    logo: '/logo.png', // 注意图片放在 public 文件夹下
     docsDir: 'docs',
     repo: 'https://github.com/alinesno-cloud/alinesno-cloud-platform-press',
     repoLabel: 'Github',
@@ -122,7 +122,7 @@ export default defineUserConfig({
       {
         text: '数字规划',
         children: [
-          { text: '数字平台规划', link: '/design/overview/' },
+          { text: '数字中台规划', link: '/design/overview/' },
           { text: '组织建设规划', link: '/group/01_部门建设/' },
           { text: '研发中台规划', link: '/framework/' },
           { text: '数据中台规划', link: '/data/framework/' }
@@ -138,8 +138,7 @@ export default defineUserConfig({
           { text: '新手入门', link: '/firstlearn/' },
           { text: '前端手册', link: '/front/' },
           { text: '后端手册', link: '/technique/' },
-          { text: '数据手册', link: '/dataskill/' },
-          { text: '经验分享', link: '/experience/' }
+          { text: '数据手册', link: '/dataskill/' }
         ]
       },
       {
@@ -157,11 +156,6 @@ export default defineUserConfig({
           text: '新手入门',
           collapsible: true,
           children: genFirestLearnSidebar(1)
-        },
-        {
-          text: '分布式入门',
-          collapsible: true,
-          children: genDistributedLearnSidebar(0)
         },
         {
           text: '第一个任务',
@@ -182,18 +176,6 @@ export default defineUserConfig({
           text: '数据治理集成',
           collapsible: true,
           children: genFirestLearnSidebar(4)
-        }
-      ],
-      '/experience/': [
-        {
-          text: '开发者社区',
-          collapsible: true,
-          children: genExperienceSidebar(0)
-        },
-        {
-          text: '经验目录',
-          collapsible: true,
-          children: genExperienceSidebar(1)
         }
       ],
       '/prices/': [
@@ -221,18 +203,6 @@ export default defineUserConfig({
           collapsible: true,
           children: genDesignSidebar(1)
         },
-      ],
-      '/design/business': [
-        {
-          text: '业务中台架构',
-          collapsible: true,
-          children: genBusinessSidebar()
-        },
-        {
-          text: '业务解决方案',
-          collapsible: true,
-          children: genBusinessSidebar()
-        }
       ],
       '/design/technique': [
         {
@@ -289,17 +259,7 @@ export default defineUserConfig({
         {
           text: '环境搭建',
           collapsible: true,
-          children: genEnvironmentSidebar()
-        },
-        {
-          text: '开发接入',
-          collapsible: true,
-          children: genAccessSidebar()
-        },
-        {
-          text: '开发规范',
-          collapsible: true,
-          children: genStandardSidebar()
+          children: genFrontEnvSidebar()
         },
         {
           text: '开发技术',
@@ -443,18 +403,6 @@ export default defineUserConfig({
           children: genBusinessBuildSidebar()
         }
       ],
-      '/connect/': [
-        {
-          text: '概述',
-          collapsible: true,
-          children: genConnectReadmeSidebar()
-        },
-        {
-          text: '连接器',
-          collapsible: true,
-          children: genConnectListSidebar()
-        }
-      ],
       '/technique/': [
         {
           text: '目录规划',
@@ -492,11 +440,6 @@ export default defineUserConfig({
           children: genMonitorSidebar()
         },
         {
-          text: '配置中心',
-          collapsible: true,
-          children: genConfigSidebar()
-        },
-        {
           text: '分布式技术',
           collapsible: true,
           children: genDubboSidebar()
@@ -506,11 +449,11 @@ export default defineUserConfig({
           collapsible: true,
           children: genSSOSidebar()
         },
-        {
-          text: '中台能力',
-          collapsible: true,
-          children: genGatewayOpenSidebar()
-        },
+        // {
+          // text: '中台能力',
+          // collapsible: true,
+          // children: genGatewayOpenSidebar()
+        // },
         {
           text: '分布式消息',
           collapsible: true,
@@ -531,11 +474,11 @@ export default defineUserConfig({
           collapsible: true,
           children: genStorageSidebar()
         },
-        {
-          text: '流程服务',
-          collapsible: true,
-          children: genWorkflowSidebar()
-        },
+        // {
+          // text: '流程服务',
+          // collapsible: true,
+          // children: genWorkflowSidebar()
+        // },
         {
           text: '自动化操作',
           collapsible: true,
@@ -573,11 +516,11 @@ export default defineUserConfig({
           collapsible: true,
           children: genDataSkillDevSidebar()
         },
-        {
-          text: '数据开放服务',
-          collapsible: true,
-          children: genDataOpenSidebar()
-        }
+        // {
+          // text: '数据开放服务',
+          // collapsible: true,
+          // children: genDataOpenSidebar()
+        // }
       ],
       '/learn/': [
         {
@@ -794,10 +737,8 @@ function genManagerContainerSidebar() {
 
 function genManagerOperationSidebar() {
   const mapArr = [
-    '/operation/01_gitbook/01_GitBook安装.md',
     '/operation/01_gitbook/02_Git安装.md',
-    '/operation/02_email/01_邮件申请及开通客户端配置.md',
-    '/operation/03_Jira/01_Jira软件安装及破解.md'
+    '/operation/02_email/01_邮件申请及开通客户端配置.md'
   ]
   return mapArr.map(i => {
     return i
@@ -810,9 +751,7 @@ function genBaseSoftwareSidebar() {
     '/operation/09_nginx/01_nginx单点安装.md',
     '/operation/08_mysql/01_MySQL单点安装.md',
     '/operation/06_redis/01_Redis单点安装.md',
-    '/operation/09_nginx/04_kong单机安装.md',
     '/operation/07_kafka/01_Kafka单点安装.md',
-    '/operation/08_mysql/04_MySQL网络安装.md',
     '/operation/27_minio/01_MinIO单机安装.md',
     '/operation/14_nexus/01_Nexus安装配置.md',
     '/operation/36_gitlab/01_Gitlab安装.md',
@@ -822,9 +761,7 @@ function genBaseSoftwareSidebar() {
     '/operation/16_sonar/01_Sonar安装.md',
     '/operation/33_docker/01_Docker在线安装.md',
     '/operation/11_zookeeper/01_Zookeeper单点安装.md',
-    '/operation/19_ansible/01_Ansible源码安装.md',
-    '/operation/22_elk/04_elk单机版本安装.md',
-    '/operation/22_elk/05_elastalert安装.md'
+    '/operation/22_elk/04_elk单机版本安装.md'
   ]
   return mapArr.map(i => {
     return i
@@ -837,10 +774,8 @@ function genDataEnvironmentSidebar() {
     '/operation/39_hudi/07_hadoop安装.md',
     '/operation/39_hudi/08_spark安装.md',
     '/operation/39_hudi/09_hive安装.md',
-    '/operation/39_hudi/11_sqoop安装.md',
     '/operation/39_hudi/01_Flink安装.md',
-    '/operation/39_hudi/06_Hudi安装.md',
-    '/operation/39_hudi/15_kettle安装.md'
+    '/operation/39_hudi/06_Hudi安装.md'
 
   ]
   return mapArr.map(i => {
@@ -853,7 +788,7 @@ function genDataEnvironmentSidebar() {
  * @returns
  */
 function genCatalogSidebar() {
-  const mapArr = ['/technique/', '/technique/01_开发技术/17_组件功能列表.md']
+  const mapArr = ['/technique/']
   return mapArr.map(i => {
     return i
   })
@@ -878,8 +813,7 @@ function genCodeGenSidebar() {
     '/technique/13_代码生成器/10_通用CURD集成.md',
     '/technique/13_代码生成器/11_示例代码集成.md',
     '/technique/13_代码生成器/12_JWT集成.md',
-    '/technique/13_代码生成器/13_版本管理集成.md',
-    '/technique/13_代码生成器/16_分布式存储集成.md'
+    '/technique/13_代码生成器/13_版本管理集成.md'
   ]
   return mapArr.map(i => {
     return i
@@ -888,7 +822,6 @@ function genCodeGenSidebar() {
 
 function genAccessSidebar() {
   const mapArr = [
-    '/technique/09_开发接入/01_HelloWorld.md',
     '/technique/09_开发接入/02_生成代码.md',
     '/technique/09_开发接入/03_配置菜单.md'
   ]
@@ -905,7 +838,8 @@ function genStandardSidebar() {
     '/technique/03_项目规范/04_web编码规范.md',
     '/technique/03_项目规范/07_UI自动化规范.md',
     '/technique/03_项目规范/05_sql编码规范.md',
-    '/technique/03_项目规范/06_版本管理规范.md'
+    '/technique/03_项目规范/06_版本管理规范.md',
+    '/technique/03_项目规范/08_项目安全规范.md'
   ]
   return mapArr.map(i => {
     return i
@@ -917,11 +851,8 @@ function genDevTechniqueSidebar() {
     '/technique/01_开发技术/02_默认功能.md',
     '/technique/01_开发技术/30_登陆配置.md',
     '/technique/01_开发技术/26_按钮权限.md',
-    '/technique/01_开发技术/37_Jdbc操作.md',
     '/technique/01_开发技术/28_租户配置.md',
     '/technique/01_开发技术/22_服务集成教程.md',
-    '/technique/01_开发技术/08_前端教程.md',
-    '/technique/01_开发技术/09_发布教程.md',
     '/technique/01_开发技术/20_获取当前用户.md',
     '/technique/06_开发教程/01_本地调试.md',
     '/technique/01_开发技术/11_异常处理.md',
@@ -936,9 +867,7 @@ function genDevTechniqueSidebar() {
     '/technique/01_开发技术/34_文件上传.md',
     '/technique/01_开发技术/31_CDN配置.md',
     '/technique/01_开发技术/32_国际化支持.md',
-    '/technique/01_开发技术/33_部署教程.md',
     '/technique/01_开发技术/35_代码转换和规范.md',
-    '/technique/01_开发技术/36_初始化应用.md',
     '/technique/01_开发技术/38_组件转SDK.md',
     '/technique/01_开发技术/41_Swagger支持.md'
   ]
@@ -952,22 +881,11 @@ function genDevTechniqueSidebar() {
  */
 function genMonitorSidebar() {
   const mapArr = [
-    '/technique/07_质量监控/',
+    // '/technique/07_质量监控/',
     '/technique/07_质量监控/06_prometheus监控.md',
     '/technique/07_质量监控/01_ContiPerf压力测试.md',
     '/technique/07_质量监控/03_链路跟踪.md',
     '/technique/07_质量监控/02_数据库监控.md'
-  ]
-  return mapArr.map(i => {
-    return i
-  })
-}
-
-
-function genConfigSidebar() {
-  const mapArr = [
-    '/technique/04_配置中心/01_使用场景.md',
-    '/technique/04_配置中心/02_使用方式.md'
   ]
   return mapArr.map(i => {
     return i
@@ -1017,17 +935,17 @@ function genPaymentSidebar() {
   })
 }
 
-// 流程服务
-function genWorkflowSidebar() {
-  const mapArr = [
-    '/technique/22_流程服务/01_流程架构设计.md',
-    '/technique/22_流程服务/02_任务接入流程.md',
-    '/technique/22_流程服务/03_流程接口服务.md'
-  ]
-  return mapArr.map(i => {
-    return i
-  })
-}
+// // 流程服务
+// function genWorkflowSidebar() {
+  // const mapArr = [
+    // '/technique/22_流程服务/01_流程架构设计.md',
+    // '/technique/22_流程服务/02_任务接入流程.md',
+    // '/technique/22_流程服务/03_流程接口服务.md'
+  // ]
+  // return mapArr.map(i => {
+    // return i
+  // })
+// }
 
 // 通知服务
 function genNoticeSidebar() {
@@ -1106,6 +1024,19 @@ function genDubboSidebar() {
     '/technique/01_开发技术/27_分布式定时任务.md',
     '/technique/01_开发技术/16_分布式锁.md',
     '/technique/01_开发技术/19_分布式限流.md'
+  ]
+  return mapArr.map(i => {
+    return i
+  })
+}
+
+/**
+ *
+ * @returns 前端脚本
+ */
+function genFrontEnvSidebar() {
+  const mapArr = [
+    '/front/'
   ]
   return mapArr.map(i => {
     return i
@@ -1264,15 +1195,16 @@ function genPlatformBusinessSidebar(type) {
       '/platform/business/13_研发中台/03_通知管理平台.md',
       '/platform/business/13_研发中台/06_存储管理平台.md',
       '/platform/business/13_研发中台/08_数据开放平台.md',
-      '/platform/business/13_研发中台/11_单点登陆管理平台.md',
-      '/platform/business/13_研发中台/14_CMS内容管理平台.md'
+      '/platform/business/13_研发中台/15_分布式消息管理服务.md',
+      '/platform/business/13_研发中台/11_单点登陆管理平台.md'
     ]
   } else if (type == 5) {
     mapArr = [
       '/platform/business/14_数据中台/06_数据上报服务.md',
       '/platform/business/14_数据中台/09_数据集成服务.md',
       '/platform/business/14_数据中台/07_主数据管理服务.md',
-      '/platform/business/14_数据中台/08_数据开发服务.md'
+      '/platform/business/14_数据中台/08_数据开发服务.md',
+      '/platform/business/14_数据中台/10_数据开放服务.md'
     ]
   } else if (type == 6) {
     mapArr = [
@@ -1427,39 +1359,6 @@ function genDesignSidebar(menus) {
       '/design/overview/',
       '/design/overview/04_数字化战略架构.md'
    ]
-
-    return mapArr.map(i => {
-      return i
-    })
-  } else if (menus == 2) {
-    // 平台架构
-    const mapArr = [
-      '/design/overview/04_数字化战略架构.md'
-    ]
-
-    return mapArr.map(i => {
-      return i
-    })
-  } else if (menus == 3) {
-    // 项目规划
-    const mapArr = [
-      '/design/overview/13_项目管理架构设计.md',
-      '/design/overview/14_项目组织架构设计.md',
-      '/design/overview/15_团队管理架构设计.md'
-    ]
-
-    return mapArr.map(i => {
-      return i
-    })
-  } else if (menus == 4) {
-    // 建设规划
-    const mapArr = [
-      '/design/overview/17_建设过程整体方案.md',
-      '/design/overview/19_核心业务建设方案.md',
-      '/design/overview/20_多业务整合建设方案.md',
-      '/design/overview/16_新旧业务整合迁移方案.md'
-    ]
-
     return mapArr.map(i => {
       return i
     })
@@ -1495,7 +1394,8 @@ function genFrameworkSidebar() {
     '/framework/essentials/03_服务架构设计.md',
     '/framework/essentials/06_平台运维架构.md',
     '/framework/essentials/08_网关架构设计.md',
-    '/framework/essentials/09_持续集成设计.md'
+    '/framework/essentials/09_持续集成设计.md',
+    '/framework/essentials/10_自动化测试架构.md'
   ]
   return mapArr.map(i => {
     return i
@@ -1517,7 +1417,6 @@ function genServiceSidebar() {
   const mapArr = [
     '/framework/service/01_服务规划规范.md',
     '/framework/service/02_基础服务规划.md',
-    '/framework/service/03_业务服务规划.md',
     '/framework/service/04_应用服务规划.md'
   ]
   return mapArr.map(i => {
@@ -1704,19 +1603,19 @@ function genToolsServiceSidebar() {
   })
 }
 
-// 业务服务
-function genBusinessServiceSidebar() {
-  const mapArr = [
-    '/env/development/15_集团权限管理服务.md',
-    '/env/development/16_内容管理服务.md',
-    '/env/development/17_会员管理服务.md',
-    '/env/development/18_基础电商服务.md'
-  ]
+// // 业务服务
+// function genBusinessServiceSidebar() {
+  // const mapArr = [
+    // '/env/development/15_集团权限管理服务.md',
+    // '/env/development/16_内容管理服务.md',
+    // '/env/development/17_会员管理服务.md',
+    // '/env/development/18_基础电商服务.md'
+  // ]
 
-  return mapArr.map(i => {
-    return i
-  })
-}
+  // return mapArr.map(i => {
+    // return i
+  // })
+// }
 
 // 运维监控
 function genOperationServiceSidebar() {
@@ -1817,33 +1716,9 @@ function genPricesSidebar(menus) {
   }
 }
 
-/**
- * 经验分享
- * @param {场景类型} menus
- * @returns
- */
-function genExperienceSidebar(menus) {
-  if (menus == 0) {
-    const mapArr: string[] = ['/experience/']
-
-    return mapArr.map(i => {
-      return i
-    })
-  } else if (menus == 1) {
-    const mapArr = [
-      '/experience/01_经验目录.md',
-      '/experience/02_沙龙活动计划.md'
-    ]
-
-    return mapArr.map(i => {
-      return i
-    })
-  }
-}
-
 function genDataSkillPlanSidebar(){
   const mapArr = [
-    '/dataskill/','/dataskill/00_plan/01_组件功能列表.md'
+    '/dataskill/'
   ]
   return mapArr.map(i => {
     return i
@@ -1902,19 +1777,6 @@ function genDataSkillDevSidebar() {
     '/dataskill/05_datadev/01_数据开发使用场景.md',
     '/dataskill/05_datadev/02_数据计算示例.md'
 
-  ]
-  return mapArr.map(i => {
-    return i
-  })
-
-}
-
-
-function genDataOpenSidebar(){
-  const mapArr = [
-    '/dataskill/06_dataopen/01_数据开放服务架构.md',
-    '/dataskill/06_dataopen/02_数据开放使用场景.md',
-    '/dataskill/06_dataopen/03_数据开放接口.md'
   ]
   return mapArr.map(i => {
     return i

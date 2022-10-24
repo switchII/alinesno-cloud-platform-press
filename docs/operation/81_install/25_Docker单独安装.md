@@ -8,11 +8,11 @@
 
 - docker-compose安装的方式和脚本
 - 环境的验证和启动
-- 日志和运维的管理方式 
+- 日志和运维的管理方式
 
 ## 前置条件
 
-- 环境确认，查看[第一章节](#)
+- 环境确认，查看[第一章节](/operation/81_install/README.md)
 - 端口正常，具体涉及端口
 
 ## 安装配置
@@ -55,7 +55,7 @@ alinesno.acp.minio.secret=
 ```
 
 执行安装脚本，命令如下
-```shell 
+```shell
 bash install.sh
 ```
 
@@ -63,7 +63,7 @@ bash install.sh
 
 从docker命令检查安装情况，以下标识为正常
 ```shell
-docker-compose log 
+docker-compose log
 ```
 
 打开访问链接地址

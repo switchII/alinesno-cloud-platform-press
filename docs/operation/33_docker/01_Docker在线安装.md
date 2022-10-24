@@ -8,8 +8,6 @@
 lsb_release -a
 ```
 
-<img :src="$withBase('/operation/jenkins_01.png')">
-
 docker 安装需要系统 64 位、系统内核版本为 3.10 以上
 
 ```bash
