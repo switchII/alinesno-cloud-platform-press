@@ -11,9 +11,9 @@ jobs:
     env:
       # 配置环境变量，包括镜像的名称，版本号，还有命名空间
       PRO_NAME: alinesno-platform-press
-      PRO_VERSION: 2.1.2-${{ github.run_number }}
+      PRO_VERSION: 2.1.2-Beta.${{ github.run_number }}
       DOCKER_HUB_NAMESPACE: luoandong
-      EXPOSE_PORT: 85
+      EXPOSE_PORT: 84
       #  添加cdn配置
       accessKey: ${{ secrets.QINIU_ACCESS_KEY }}
       secretKey: ${{ secrets.QINIU_SECRET_KEY }}
