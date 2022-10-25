@@ -3,9 +3,9 @@
 ## snarqube 安装说明
 
 条件限制：
-1、jdk1.8
-2、数据库 oracle 的运行环境是 jre8 ,mysql 支持 5.6 ，5.7
-3、浏览器必须启动支持 javascript ，支持火狐，谷歌，苹果等浏览器，支持 IE11 以上的版本。
+1. jdk1.8
+2. 数据库 oracle 的运行环境是 jre8 ,mysql 支持 5.6 ，5.7
+3. 浏览器必须启动支持 javascript ，支持火狐，谷歌，苹果等浏览器，支持 IE11 以上的版本。
 
 ## 下载 Sonar
 
