@@ -98,7 +98,7 @@ export default defineUserConfig({
     docsDir: 'docs',
     repo: 'https://github.com/alinesno-cloud/alinesno-cloud-platform-press',
     repoLabel: 'Github',
-    docsBranch: '2.1.1',
+    docsBranch: '2.1.2',
     editLink: true,
     // editLinkText: '编辑页面',
     sidebarDepth: 0,
