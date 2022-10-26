@@ -129,7 +129,7 @@
             <img :src="$withBase('/svg/GitHub.svg')" />
           </p>
           <p class="label">欢迎参与贡献！</p>
-          <p class="tip">在 <a href="https://github.com/alinesno-cloud/alinesno-platform-press" target="_blank" >GitHub</a> 上协作。我们期待您的加入！</p>
+          <p class="tip">在 <a href="https://github.com/alinesno-cloud/alinesno-cloud-platform-press" target="_blank" >GitHub</a> 上协作。我们期待您的加入！</p>
         </li>
         <li>
           <p class="icon">
