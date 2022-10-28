@@ -474,15 +474,20 @@ export default defineUserConfig({
           collapsible: true,
           children: genStorageSidebar()
         },
-        // {
-          // text: '流程服务',
-          // collapsible: true,
-          // children: genWorkflowSidebar()
-        // },
         {
           text: '自动化操作',
           collapsible: true,
           children: genOperationDevopsSidebar()
+        },
+        {
+          text: '审计日志监控',
+          collapsible: true,
+          children: genWatcherDevopsSidebar()
+        },
+        {
+          text: '预警监控',
+          collapsible: true,
+          children: genTransferDevopsSidebar()
         }
       ],
       '/dataskill/': [
@@ -1797,4 +1802,38 @@ function genSolutionPlatformSidebar() {
     return i
   })
 }
+
+/**
+ * 审计日志监控
+ */
+function genWatcherDevopsSidebar() {
+  const mapArr = [
+    '/technique/22_审计日志监控/01_应用场景.md',
+    '/technique/22_审计日志监控/02_SpringBoot应用接入.md',
+    '/technique/22_审计日志监控/03_数据分析接入.md',
+    '/technique/22_审计日志监控/04_钉钉预警接入.md'
+  ]
+
+  return mapArr.map(i => {
+    return i
+  })
+}
+
+/**
+ * 预警监控
+ */
+function genTransferDevopsSidebar() {
+  const mapArr = [
+    '/technique/23_应用监控预警服务/01_应用监控预警场景.md',
+    '/technique/23_应用监控预警服务/02_配置预警接入端.md',
+    '/technique/23_应用监控预警服务/03_自定义配置预警规则.md',
+    '/technique/23_应用监控预警服务/04_集成第三方移动预警通知.md',
+    '/technique/23_应用监控预警服务/05_预警服务与业务集成.md'
+  ]
+
+  return mapArr.map(i => {
+    return i
+  })
+}
+
 
