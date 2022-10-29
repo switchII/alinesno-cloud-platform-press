@@ -12,12 +12,13 @@
 
 <!-- > 当前只为演示平台，暂时未进入输出开发，计划三季度达到开发使用版本 -->
 
-## 演示地址
+## 视频教程
 
 ACP数字中台解决方案介绍
 
 <!-- <iframeVideo ihtml="https://player.bilibili.com/player.html?aid=895555408&bvid=BV1GA4y197Vf&cid=573996741&page=1"></iframeVideo> -->
 
+<!--
   <iframe
     class="video-iframe"
     width="700px"
@@ -28,6 +29,7 @@ ACP数字中台解决方案介绍
     allowfullscreen="allowfullscreen"
     src="https:////player.bilibili.com/player.html?aid=812799519&bvid=BV1134y1W79q&cid=755760214&page=1"
   ></iframe>
+-->
 
 这里列的是开源环境的演示地址，一般也使用于开发环境使用，通过租户注册成为成员，基于中台环境进一步进行开发项目
 
