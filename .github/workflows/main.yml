@@ -29,26 +29,14 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }} 🔧
         uses: actions/setup-node@v1
         with:
-          node-version: '16.17.0'
-          
-      # 缓存 node_modules
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          node-version: '16.17.0' 
 
-      # 如果缓存没有命中，安装依赖
-      - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile
+      #  安装依赖
+      - name: Install dependencies 
+        run: npm i
   
       - name: Build Docs
-        run: yarn run docs:build
+        run: npm run docs:build
        
       # upload to github
       - name: Deploy to GitHub Pages
