@@ -25,7 +25,7 @@ export default defineUserConfig({
   plugins: [
     feedPlugin({
       // 插件选项
-      hostname: 'http://alinesno-platform.linesno.com' ,
+      hostname: 'https://alinesno-platform.linesno.com' ,
       json: true ,
       atom: true ,
       rss: true ,
