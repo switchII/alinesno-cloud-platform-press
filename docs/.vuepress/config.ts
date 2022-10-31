@@ -16,7 +16,7 @@ export default defineUserConfig({
   base: '/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
-    // ['link', { rel: 'stylesheet', href: 'http://static.cloud.linesno.com/asserts/vendors/fontawesome/css/all.css' }]
+    ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.css' }]
   ],
   bundler: viteBundler({
     viteOptions: {},
