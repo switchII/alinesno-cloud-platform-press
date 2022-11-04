@@ -475,12 +475,7 @@ export default defineUserConfig({
           children: genStorageSidebar()
         },
         {
-          text: '自动化操作',
-          collapsible: true,
-          children: genOperationDevopsSidebar()
-        },
-        {
-          text: '审计日志监控',
+          text: '审计日志',
           collapsible: true,
           children: genWatcherDevopsSidebar()
         },
@@ -520,12 +515,7 @@ export default defineUserConfig({
           text: '数据开发服务',
           collapsible: true,
           children: genDataSkillDevSidebar()
-        },
-        // {
-          // text: '数据开放服务',
-          // collapsible: true,
-          // children: genDataOpenSidebar()
-        // }
+        }
       ],
       '/learn/': [
         {
@@ -960,19 +950,6 @@ function genNoticeSidebar() {
     '/technique/17_通知服务/04_通知技术构架.md',
     '/technique/17_通知服务/03_业务集成使用.md'
   ]
-  return mapArr.map(i => {
-    return i
-  })
-}
-
-// 自动化操作监控
-function genOperationDevopsSidebar() {
-  const mapArr = [
-    '/technique/20_自动化操作/01_自动化操作架构.md',
-    '/technique/20_自动化操作/02_移动端自动化操作.md',
-    '/technique/20_自动化操作/03_集成多种自动化操作示例.md'
-  ]
-
   return mapArr.map(i => {
     return i
   })

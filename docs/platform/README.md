@@ -65,7 +65,6 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 |      |          |                    |      |                                                                    |      |
 | 1    | 运维监控 | 审计日志监控服务   | 完成 | [alinesno-cloud-logger][alinesno-cloud-logger]                     |      |
 | 2    |          | 应用监控预警服务   | 完成 | [alinesno-cloud-transfer][alinesno-cloud-transfer]                 |      |
-| 3    |          | 自动化操作服务     | 初稿 | [alinesno-cloud-operation][alinesno-cloud-operation]               |      |
 |      |          |                    |      |                                                                    |      |
 | 2    | 数据治理 | 数据上报服务       | 初稿 | [alinesno-cloud-data-report][alinesno-cloud-data-report]           |      |
 | 3    |          | 主数据管理服务     | 初稿 | [alinesno-cloud-data-mdn][alinesno-cloud-data-mdn]                 |      |
@@ -84,7 +83,6 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 [alinesno-cloud-cms]: ./business/13_研发中台/14_CMS内容管理平台.md
 [alinesno-cloud-monitor]: ./business/18_运维中台/04_自动化运维平台.md
 [alinesno-cloud-logger]: ./business/18_运维中台/01_审计日志监控平台.md
-[alinesno-cloud-operation]: ./business/18_运维中台/02_Ansible自动化操作平台.md
 [alinesno-cloud-transfer]: ./business/18_运维中台/03_应用监控预警服务.md
 [alinesno-cloud-platform-sso]: ./business/13_研发中台/11_单点登陆管理平台.md
 [alinesno-cloud-initializr-admin]: ./business/19_业务中台/01_代码生成脚手架.md
