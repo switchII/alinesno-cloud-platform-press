@@ -80,4 +80,4 @@ output.kafka:
 
 - 后端也可以不接入spring-logback.xml的配置，使用filebeat收集日志，这个主要还是需要看项目的情况
 
-[logback-spring]: #
+[logback-spring]: https://gitee.com/alinesno-cloud/alinesno-demo-gateway-open/blob/master/demo-watcher/logback-spring.xml

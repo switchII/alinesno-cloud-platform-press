@@ -879,8 +879,7 @@ function genMonitorSidebar() {
     // '/technique/07_质量监控/',
     '/technique/07_质量监控/06_prometheus监控.md',
     '/technique/07_质量监控/01_ContiPerf压力测试.md',
-    '/technique/07_质量监控/03_链路跟踪.md',
-    '/technique/07_质量监控/02_数据库监控.md'
+    '/technique/07_质量监控/03_链路跟踪.md'
   ]
   return mapArr.map(i => {
     return i
@@ -1788,7 +1787,8 @@ function genWatcherDevopsSidebar() {
     '/technique/22_审计日志监控/01_应用场景.md',
     '/technique/22_审计日志监控/02_SpringBoot应用接入.md',
     '/technique/22_审计日志监控/03_数据分析接入.md',
-    '/technique/22_审计日志监控/04_钉钉预警接入.md'
+    '/technique/22_审计日志监控/04_钉钉预警接入.md',
+    '/technique/22_审计日志监控/05_SQL审计接入.md'
   ]
 
   return mapArr.map(i => {
@@ -1803,7 +1803,6 @@ function genTransferDevopsSidebar() {
   const mapArr = [
     '/technique/23_应用监控预警服务/01_应用监控预警场景.md',
     '/technique/23_应用监控预警服务/02_配置预警接入端.md',
-    '/technique/23_应用监控预警服务/03_自定义配置预警规则.md',
     '/technique/23_应用监控预警服务/04_集成第三方移动预警通知.md',
     '/technique/23_应用监控预警服务/05_预警服务与业务集成.md'
   ]

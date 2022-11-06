@@ -27,6 +27,9 @@
 
 <p class="show-images"><img src="/images/01_prometheus.png" width="100%" /></p>
 
+注意说明:
+- prometheus安全的问题，不要对外应用访问proemtheus的监控地址
+
 在 grafana 的显示效果如下:
 
 <p class="show-images"><img src="/images/02_prometheus.png" width="100%" /></p>
