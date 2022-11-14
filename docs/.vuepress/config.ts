@@ -1181,7 +1181,7 @@ function genPlatformBusinessSidebar(type) {
             '/platform/business/13_研发中台/02_云门户管理平台.md',
             '/platform/business/13_研发中台/03_通知管理平台.md',
             '/platform/business/13_研发中台/06_存储管理平台.md',
-            '/platform/business/13_研发中台/08_数据开放平台.md',
+            '/platform/business/13_研发中台/16_网关管理服务.md',
             '/platform/business/13_研发中台/15_分布式消息管理服务.md',
             '/platform/business/13_研发中台/11_单点登陆管理平台.md'
         ]
@@ -1190,8 +1190,8 @@ function genPlatformBusinessSidebar(type) {
             '/platform/business/14_数据中台/06_数据上报服务.md',
             '/platform/business/14_数据中台/09_数据集成服务.md',
             '/platform/business/14_数据中台/07_主数据管理服务.md',
-            '/platform/business/14_数据中台/08_数据开发服务.md',
-            '/platform/business/14_数据中台/10_数据开放服务.md'
+            '/platform/business/14_数据中台/08_数据开发服务.md'
+            // '/platform/business/14_数据中台/10_数据开放服务.md'
         ]
     } else if (type == 6) {
         mapArr = [
