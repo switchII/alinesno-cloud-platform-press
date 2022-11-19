@@ -849,6 +849,7 @@ function genStandardSidebar() {
 
 function genDevTechniqueSidebar() {
     const mapArr = [
+        '/technique/01_开发技术/01_父类说明.md',
         '/technique/01_开发技术/02_默认功能.md',
         '/technique/01_开发技术/30_登陆配置.md',
         '/technique/01_开发技术/26_按钮权限.md',
