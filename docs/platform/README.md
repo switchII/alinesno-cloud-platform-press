@@ -69,8 +69,7 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 | 2    | 数据治理 | 数据上报服务       | 初稿 | [alinesno-cloud-data-report][alinesno-cloud-data-report]           |      |
 | 3    |          | 主数据管理服务     | 初稿 | [alinesno-cloud-data-mdn][alinesno-cloud-data-mdn]                 |      |
 | 4    |          | 数据集成服务       | 初稿 | [alinesno-cloud-data-etl][alinesno-cloud-data-etl]                 |      |
-| 5    |          | 数据开发服务       | 初稿 | [alinesno-cloud-data-develop][alinesno-cloud-data-develop]         |      |
-| 6    |          | 数据开放服务       | 初稿 | [alinesno-cloud-data-open][alinesno-cloud-data-open]               |      |
+| 5    |          | 数据开发服务       | 初稿 | [alinesno-cloud-data-develop][alinesno-cloud-data-develop]         |      | 
 |      |          |                    |      |                                                                    |      |
 
 <!-- | 4    |          | 应用监控预警服务       |初稿 |    [alinesno-cloud-monitor][alinesno-cloud-monitor]                   |      | -->
