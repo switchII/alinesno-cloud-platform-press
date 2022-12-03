@@ -1042,7 +1042,6 @@ function genFrontSidebar() {
         '/front/03_引入依赖.md',
         '/front/04_注册组件.md',
         '/front/05_权限使用.md',
-        '/front/06_多级目录.md',
         '/front/08_使用图标.md',
         '/front/09_使用字典.md',
         '/front/10_使用参数.md',
