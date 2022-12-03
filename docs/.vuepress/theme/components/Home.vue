@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto" style="background-color:#fff">
+    <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto" style="background-color:#fff;padding-bottom:0px;">
       <div class="container text-center td-arrow-down">
         <span class="h4 mb-0">
           <h3 style="color:#555">ACP 可以帮助我做什么</h3>
@@ -52,7 +52,7 @@
       </div>
     </section>
 
-    <div class="features-box" style="background-color:#fff">
+    <div class="features-box" style="background-color:#fff;padding-bottom:6rem">
       <div v-if="helpAll.length" class="features" style="background-color:#fff">
         <div
           v-for="(feature, index) in helpAll"
@@ -104,45 +104,6 @@
 
     <home-service />
 
-    <!-- 案例说明_start -->
-    <case-temp />
-    <!-- 案例说明_end -->
-
-    <div class="hero-section">
-      <p class="title">加入讨论</p>
-      <p class="description" style="width:80%;max-width:700px;margin:auto;">
-        通过以下方式加入讨论，或为数字化建设添砖加瓦
-      </p>
-    </div>
-
-    <div class="footer-section">
-      <ul>
-        <li>
-          <p class="icon">
-            <img :src="$withBase('/weixin.jpg')" />
-          </p>
-          <p class="label">社区交流群</p>
-          <p class="tip">数字化平台微信社区交流群,参与社区的讨论</p>
-        </li>
-        <li>
-          <p class="icon">
-            <img :src="$withBase('/svg/GitHub.svg')" />
-          </p>
-          <p class="label">欢迎参与贡献！</p>
-          <p class="tip">在 <a href="https://github.com/alinesno-cloud/alinesno-cloud-platform-press" target="_blank" >GitHub</a> 上协作。我们期待您的加入！</p>
-        </li>
-        <li>
-          <p class="icon">
-            <img :src="$withBase('/luoxiaodong.jpg')" />
-          </p>
-          <p class="label">请关注我们的公众号！</p>
-          <p class="tip">我们会在第一时间分享新发布的特性和使用心得</p>
-        </li>
-      </ul>
-    </div>
-
-    <Content custom />
-
     <!-- footer_start -->
     <footer-temp />
     <!-- footer_end -->
@@ -153,21 +114,14 @@
 </template>
 
 <script>
-// import NavLink from '@default-theme/NavLink.vue'
-import CaseTemp from './Case.vue'
 import HomeService from './HomeService.vue'
 import FooterTemp from './Footer.vue'
-
 import AutoLink from '@theme/AutoLink.vue'
-
-import { isGitee } from './utils'
 
 export default {
   components: {
-    // NavLink,
     AutoLink ,
     HomeService,
-    CaseTemp,
     FooterTemp
   },
   data() {
@@ -215,9 +169,9 @@ export default {
           icon: 'fas fa-bus-alt'
         },
         {
-          title: '技术研发监控体系',
+          title: '转量级数据治理体系',
           details:
-            '数字企业的研发效能引擎，功能覆盖了项目应用管理、代码仓库管理、敏捷项目协作管理、CI/CD、高效地响应需求变化，过程自动化流水。',
+            '基础能力管理，数据采集、计算、治理运营输出,统一业务规范，集成DataOps能力，提供数据API接口提供业务集成',
           icon: 'fas fa-crop'
         },
         {
@@ -235,9 +189,9 @@ export default {
       ],
       featuresAll: [
         {
-          title: '一套技术DevOps研发体系',
+          title: '一套技术研发基础框架和方法',
           details:
-            '为企业基础架构和统一研发云平台，为企业提供统一研发平台， 低代码开发平台。整体平台从规范、组织、架构-、业务、持续集成、自动化、在线升级全方位企业级数字中台研发解决方案',
+            '为企业基础架构和统一研发云平台，为企业提供统一研发平台， 代码生成器开发平台。整体平台从规范、组织、架构-、业务、持续集成、自动化、在线升级全方位企业级数字中台研发解决方案',
           icon: 'fas fa-feather'
         },
         {
@@ -259,7 +213,7 @@ export default {
           icon: 'fas fa-file-word'
         },
         {
-          title: '集成权限多个管理基础组件',
+          title: '集成多个基础服务管理组件',
           details:
             '集成包括基础权限、统一用户、分布式存储、分布式通知、消息服务、代码生成器、网关、开放平台等可视化的基础管理组件，规避技术上的难点，让业务更专注于业务',
           icon: 'fas fa-gem'
@@ -274,14 +228,6 @@ export default {
     }
   },
   computed: {
-    isCN() {
-      // return this.$lang === 'zh-CN'
-      return true
-    },
-    isGitee() {
-      if (this.$isServer) return
-      return isGitee()
-    },
     data() {
       return this.$page.frontmatter
     },
@@ -304,7 +250,7 @@ export default {
 // @import '~@default-theme/styles/config.styl';
 
 $accentColor: #005bd4;
-$textColor:#000; 
+$textColor:#000;
 $navbarHeight: 65px ;
 $MQMobile: 600px ;
 $MQMobileNarrow: 600px;
@@ -412,7 +358,7 @@ $MQMobileNarrow: 600px;
 .footer-section {
   text-align: center;
   padding: 4rem 0px;
-  background-color: rgb(37, 37, 37) ; 
+  background-color: rgb(37, 37, 37) ;
   float: left;
   width: 100%;
   margin-bottom: 0px;
@@ -538,7 +484,7 @@ $MQMobileNarrow: 600px;
 
 .td-box--primary {
     color: #fff;
-    background-color: #015bd4 ; 
+    background-color: #015bd4 ;
     padding-top: 4rem;
     padding-bottom: 4rem;
     text-align: center!important;

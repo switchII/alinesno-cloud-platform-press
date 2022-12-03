@@ -147,7 +147,7 @@ export default defineUserConfig({
             },
             {
                 text: '中台演示',
-                link: '/display/'
+                link: 'http://alinesno-saas.beta.linesno.com'
             },
         ],
         sidebar: {

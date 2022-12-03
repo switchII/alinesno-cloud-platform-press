@@ -5,7 +5,7 @@
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
   >
- 
+
     <!-- <div v-if="isHome||isDonate" id="codefund" class="home-codefund" /> -->
 
     <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" />

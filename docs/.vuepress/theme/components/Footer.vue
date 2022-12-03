@@ -10,7 +10,7 @@
           </p>
         </div>
         <div class="col-md-3">
-          <p class="footer-title">品牌列表</p>
+          <p class="footer-title">产品列表</p>
           <p
             class="footer-text-product"
             style="padding-top: 10px; margin-bottom: 0px"
@@ -118,7 +118,7 @@
 .footer-page {
   float: left;
   background: #eef1f6 none repeat center top;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   width: 100%;
 
   .container {

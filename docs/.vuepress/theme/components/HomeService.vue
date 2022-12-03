@@ -22,7 +22,7 @@
               <div class="des" style="color: #fff; width:100%; text-align:center;">
                 提供全周期的技术支持服务，满足企业研发中台环境的搭建，包含部署指导，业务集成指导，二次开发指导还有过程答疑等，同步包括 <br/>
                 业务整合，业务组开发使用指导，满足中小企业快速中台化，平台化的服务需求。
-              </div> 
+              </div>
               <ul class="col clearfix">
                 <li
                   class="colli"
@@ -98,8 +98,8 @@ export default {
   float: left;
   width: 100%;
   margin-top: 0px;
-  padding-top: 20px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 130px;
 
   .col {
     list-style: none;
@@ -152,7 +152,7 @@ export default {
           }
 
           .item-desc {
-            font-size: 1rem ;  
+            font-size: 1rem ;
             color: #fff;
             padding: 10px;
             line-height: 24px;
