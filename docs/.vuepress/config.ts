@@ -120,12 +120,12 @@ export default defineUserConfig({
                 link: '/solution/'
             },
             {
-                text: '数字规划',
+                text: '数字建设',
                 children: [
-                    { text: '数字中台规划', link: '/design/overview/' },
-                    { text: '组织建设规划', link: '/group/01_部门建设/' },
-                    { text: '研发中台规划', link: '/framework/' },
-                    { text: '数据中台规划', link: '/data/framework/' }
+                    { text: '数字规划', link: '/design/overview/' },
+                    { text: '组织架构', link: '/group/01_部门建设/' },
+                    { text: '研发架构', link: '/framework/' },
+                    { text: '数据架构', link: '/data/framework/' }
                 ]
             },
             {

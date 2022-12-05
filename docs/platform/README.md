@@ -15,10 +15,10 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 
 - 开箱即用的微服务技术体系
 - 快速搭建数字中台和业务集成
-- 数据治理体系和数据治理建设 
+- 数据治理体系和数据治理建设
 
 ## 产品主要功能
- 
+
 - 技术、研发中台和数据中台底座，快速集成业务中台
 - 统一的前端框架和微服务研发引擎，k8S/docker容器化支持
 - 集成权限/用户/认证/授权通知/存储等基础组件
@@ -67,13 +67,10 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 | 2    |          | 应用监控预警服务   | 完成 | [alinesno-cloud-transfer][alinesno-cloud-transfer]                 |      |
 |      |          |                    |      |                                                                    |      |
 | 2    | 数据治理 | 数据上报服务       | 初稿 | [alinesno-cloud-data-report][alinesno-cloud-data-report]           |      |
-| 3    |          | 主数据管理服务     | 初稿 | [alinesno-cloud-data-mdn][alinesno-cloud-data-mdn]                 |      |
-| 4    |          | 数据集成服务       | 初稿 | [alinesno-cloud-data-etl][alinesno-cloud-data-etl]                 |      |
-| 5    |          | 数据开发服务       | 初稿 | [alinesno-cloud-data-develop][alinesno-cloud-data-develop]         |      | 
+| 3    |          | 主数据管理服务     | 完成 | [alinesno-cloud-data-mdn][alinesno-cloud-data-mdn]                 |      |
+| 4    |          | 数据集成服务       | 完成 | [alinesno-cloud-data-etl][alinesno-cloud-data-etl]                 |      |
+| 5    |          | 数据开发服务       | 完成 | [alinesno-cloud-data-develop][alinesno-cloud-data-develop]         |      |
 |      |          |                    |      |                                                                    |      |
-
-<!-- | 4    |          | 应用监控预警服务       |初稿 |    [alinesno-cloud-monitor][alinesno-cloud-monitor]                   |      | -->
-<!-- | 6    |          | 支付管理服务           | 编写中 | alinesno-cloud-base-pay                                            |      | -->
 
 [devops]: ./paas/01_持续集成平台.md
 [alinesno-cloud-core]: ./business/12_技术中台/01_微服务研发引擎.md
