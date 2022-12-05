@@ -834,9 +834,7 @@ function genAccessSidebar() {
 function genStandardSidebar() {
     const mapArr = [
         '/technique/03_项目规范/01_服务工程规范.md',
-        '/technique/03_项目规范/02_前端工程规范.md',
         '/technique/03_项目规范/03_Java编码规范.md',
-        '/technique/03_项目规范/04_web编码规范.md',
         '/technique/03_项目规范/07_UI自动化规范.md',
         '/technique/03_项目规范/05_sql编码规范.md',
         '/technique/03_项目规范/06_版本管理规范.md',
@@ -851,10 +849,7 @@ function genDevTechniqueSidebar() {
     const mapArr = [
         '/technique/01_开发技术/01_父类说明.md',
         '/technique/01_开发技术/02_默认功能.md',
-        '/technique/01_开发技术/30_登陆配置.md',
         '/technique/01_开发技术/26_按钮权限.md',
-        '/technique/01_开发技术/28_租户配置.md',
-        '/technique/01_开发技术/22_服务集成教程.md',
         '/technique/01_开发技术/20_获取当前用户.md',
         '/technique/06_开发教程/01_本地调试.md',
         '/technique/01_开发技术/11_异常处理.md',
@@ -862,14 +857,10 @@ function genDevTechniqueSidebar() {
         '/technique/01_开发技术/37_页面搜索.md',
         '/technique/01_开发技术/13_缓存使用.md',
         '/technique/01_开发技术/14_消息使用.md',
-        '/technique/01_开发技术/24_多数据库源.md',
         '/technique/01_开发技术/25_配置加密.md',
         '/technique/01_开发技术/23_表单提交校验.md',
         '/technique/01_开发技术/14_Excel导出.md',
         '/technique/01_开发技术/34_文件上传.md',
-        '/technique/01_开发技术/31_CDN配置.md',
-        '/technique/01_开发技术/32_国际化支持.md',
-        '/technique/01_开发技术/35_代码转换和规范.md',
         '/technique/01_开发技术/38_组件转SDK.md',
         '/technique/01_开发技术/41_Swagger支持.md'
     ]
@@ -980,8 +971,7 @@ function genMessageSidebar() {
         '/technique/19_分布式消息/01_分布式消息架构.md',
         '/technique/19_分布式消息/02_业务消息集成.md',
         '/technique/19_分布式消息/04_消息管理平台手册.md',
-        '/technique/19_分布式消息/05_业务集成最佳实践.md',
-        '/technique/19_分布式消息/03_消息异常处理.md'
+        '/technique/19_分布式消息/05_业务集成最佳实践.md'
     ]
     return mapArr.map(i => {
         return i

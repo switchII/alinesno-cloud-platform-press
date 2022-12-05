@@ -21,98 +21,10 @@
 
 ## 组件操作
 
-以下为添加工作流组件为示例
+以下为添加业务组件为示例
 
-添加`Enable`说明，例如
-
-```java
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
-@Documented
-@EnableJpaRepositories
-@Import({
-	WorkflowConfigurationSelector.class,
-	WorkflowEntityDefinitionRegistrar.class,
-	WorkflowRepositoryDefinitionRegistrar.class
-})
-public @interface EnableWorkflow {
-
-	boolean autoRegister() default true;
-	String[] jpa() default {};
-	String[] entity() default {};
-
-	//--------------- JPA特定的属性，为与默认JPA的兼容，保留不必修改----------------------
-	Filter[] includeFilters() default {};
-	Filter[] excludeFilters() default {};
-	Class<?> repositoryFactoryBeanClass() default JpaRepositoryFactoryBean.class;
-	String namedQueriesLocation() default "";
-	String repositoryImplementationPostfix() default "Impl";
-	String transactionManagerRef() default "transactionManager";
-	String entityManagerFactoryRef() default "entityManagerFactory";
-	boolean enableDefaultTransactions() default true;
-	//--------------- JPA特定的属性，为与默认JPA的兼容，保留不必修改----------------------
-
-}
-```
-
-添加`Entity`注册说明，例如
-
-```java
-public class WorkflowEntityDefinitionRegistrar extends ConstomEntityDefinitionRegistrar {
-
-	@Override
-	public String[] getBusinessBackPackage() {
-		return new String[] {EnableWorkflow.class.getPackage().getName()+".entity"};
-	}
-
-	@Override
-	public Class<? extends Annotation> getAnnotation() {
-		return EnableWorkflow.class ;
-	}
-
-}
-```
-
-添加`Repository`注册操作，例如
-
-```java
-public class WorkflowRepositoryDefinitionRegistrar extends ConstomRepositoryDefinitionRegistrar {
-
-	@Override
-	public String[] getBusinessBackPackage() {
-		return new String[] {EnableWorkflow.class.getPackage().getName()+".repository"};
-	}
-
-	@Override
-	protected Class<? extends Annotation> getAnnotation() {
-		return EnableWorkflow.class ;
-	}
-
-}
-```
-
-添加`Componse`操作，例如
-
-```java
-public class WorkflowConfigurationSelector extends CustomAutoConfigurationImportSelector {
-
-	@Override
-	public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-		return this.scanComponent();
-	}
-
-	@Override
-	protected Class<?> getAnnotationClass() {
-		return EnableWorkflow.class;
-	}
-
-}
-```
-
-工程结构如下：
-
-<img :src="$withBase('/technique/sdk_01.jpg')">
+这里主要是直接依赖`starter`组件即可，同时初始化和扫描到对应的业务组件实体
 
 ## 其它
 
-- 后期待整合到代码生成器中
+- 无
