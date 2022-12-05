@@ -185,7 +185,7 @@ export default defineUserConfig({
                     children: genPricesSidebar(0)
                 },
                 {
-                    text: '交付内容',
+                    text: '关于我们',
                     collapsible: true,
                     children: genPricesSidebar(1)
                 }
@@ -1686,14 +1686,20 @@ function genSolutionSidebar(menus) {
 function genPricesSidebar(menus) {
     if (menus == 0) {
         // 平台介绍
-        const mapArr = ['/prices/', '/prices/03_服务内容.md']
+        const mapArr = ['/prices/',
+            '/prices/03_服务内容.md' ,
+            '/prices/02_授权协议.md'
+        ]
 
         return mapArr.map(i => {
             return i
         })
     } else if (menus == 1) {
         // 平台介绍
-        const mapArr = ['/prices/02_授权协议.md' , '/prices/04_商务沟通.md']
+        const mapArr = [
+            '/prices/04_商务沟通.md',
+            '/prices/05_加入我们.md'
+        ]
 
         return mapArr.map(i => {
             return i
