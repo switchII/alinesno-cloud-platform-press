@@ -11,19 +11,14 @@
 
 ## 接入配置
 
-这里接入配置按最简化配置接入，实现日志的收集和管理即可
+这里接入配置按最简化配置接入，实现日志的收集和管理即可，日志管理服务是属于SaaS服务，
+注意一定要配置`UserKey`配置。
 
 ### 后端接入
 
 添加日志用依赖, 如下：
 
 ```xml
-<dependency>
-  <groupId>com.alinesno.cloud.watcher</groupId>
-  <artifactId>alinesno-cloud-watcher-core</artifactId>
-  <version>${revison}</version>
-</dependency>
-
 <dependency>
   <groupId>com.alinesno.cloud.watcher</groupId>
   <artifactId>alinesno-cloud-watcher-logback</artifactId>
@@ -37,6 +32,7 @@
 ```xml
 <springProperty scope="context" name="watcher.appName" source="spring.application.name"/>
 <springProperty scope="context" name="watcher.env" source="spring.profiles.active"/>
+<springProperty scope="context" name="watcher.userKey" source="alinesno.watcher.userKey"/>
 
  <!-- 使用kafka队列配置 -->
 <appender name="ALINESNO-CLOUD-WATCHER" class="com.alinesno.cloud.watcher.logback.appender.KafkaAppender">
@@ -44,7 +40,12 @@
 
     <!-- 这里配置kafka的接入地址-->
     <kafkaHosts>192.168.1.1:9092</kafkaHosts>
+
+    <!-- 环境 -->
     <env>${watcher.env}</env>
+
+    <!-- 接入密钥 -->
+    <userKey>${watcher.userKey}</userKey>
 </appender>
 
 <root level="INFO">
