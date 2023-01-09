@@ -31,11 +31,6 @@ export default defineUserConfig({
             atom: true ,
             rss: true ,
         }),
-        // 谷歌分析
-        googleAnalyticsPlugin({
-            // 配置项
-            id: 'G-V0D6KNXG35',
-        }),
     ],
     theme: defaultTheme({
         logo: '/logo.png', // 注意图片放在 public 文件夹下
@@ -49,11 +44,6 @@ export default defineUserConfig({
         lastUpdated: true,
         lastUpdatedText: 'Last Updated',
         contributors: false,
-        plugins: [
-            mediumZoomPlugin({
-            // 配置项
-            }),
-        ],
         navbar: [
             // 嵌套 Group - 最大深度为 2
             {
