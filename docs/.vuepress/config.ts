@@ -1,8 +1,5 @@
 import { defineUserConfig } from 'vuepress'
 
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
-import { feedPlugin } from "vuepress-plugin-feed2";
 import { getDirname, path } from '@vuepress/utils'
 import { defaultTheme, defineUserConfig } from 'vuepress'
 
@@ -24,13 +21,6 @@ export default defineUserConfig({
         ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.css' }]
     ],
     plugins: [
-        feedPlugin({
-            // 插件选项
-            hostname: 'https://alinesno-platform.linesno.com' ,
-            json: true ,
-            atom: true ,
-            rss: true ,
-        }),
     ],
     theme: defaultTheme({
         logo: '/logo.png', // 注意图片放在 public 文件夹下

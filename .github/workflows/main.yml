@@ -26,17 +26,12 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Use Node.js ${{ matrix.node-version }} 🔧
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16.13.1'
-
       #  安装依赖
       - name: Install dependencies
-        run: npm i
+        run: yarn install
 
       - name: Build Docs
-        run: npm run docs:build
+        run: yarn run docs:build
 
       # upload to github
       - name: Deploy to GitHub Pages
@@ -65,42 +60,3 @@ jobs:
           tags: ${{ env.DOCKER_HUB_NAMESPACE }}/${{ env.PRO_NAME }}:${{ env.PRO_VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
        # -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 部署到docker-hub _end >>>>>>>>>>>>>>>>>>>>>>>>>>
-
-      # 获取PR信息并将其添加到环境变量
-      - name: set PR_INFO
-        run: |
-          echo PR_NUMBER=$(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }') >> $GITHUB_ENV
-          echo PR_TITLE=$(jq --raw-output .pull_request.title "$GITHUB_EVENT_PATH") >> $GITHUB_ENV
-          echo PR_URL=$(jq --raw-output .pull_request.html_url "$GITHUB_EVENT_PATH") >> $GITHUB_ENV
-          echo PR_USER=$(jq --raw-output .pull_request.user.login "$GITHUB_EVENT_PATH") >> $GITHUB_ENV
-
-      # 打印环境变量
-      - name: print env
-        run: printenv
-
-      # 发送钉钉消息
-      - name: build success
-        if: ${{ success() }}
-        uses: fifsky/dingtalk-action@master
-        with:
-          url: https://oapi.dingtalk.com/robot/send?access_token=${{ secrets.DING_TOKEN}}
-          type: markdown
-          at: ${{ secrets.DINGTALK_AT_USER }}
-          content: |
-            ### 💯👨‍💻 文档构建成功
-            project: alinesno-cloud-platform(${{ env.PRO_VERSION }})
-            > Maven Build of [# ${{ env.PRO_VERSION }}](${{ env.PR_URL }}) by ${{ env.PR_USER }} success
-            > ^_^ from github action message
-
-      - name: maven build failure
-        if: ${{ failure() }}
-        uses: fifsky/dingtalk-action@master
-        with:
-          url: https://oapi.dingtalk.com/robot/send?access_token=${{ secrets.DING_TOKEN}}
-          type: markdown
-          at: ${{ secrets.DINGTALK_AT_USER }}
-          content: |
-            ### 💤🤷‍♀️ 文档构建失败
-            project: alinesno-cloud-platform(${{ env.PRO_VERSION }})
-            > Maven Build of [# ${{ env.PRO_VERSION }}](${{ env.PR_URL }}) by ${{ env.PR_USER }} failure
-            > (⋟﹏⋞)   from github action message
