@@ -29,7 +29,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }} 🔧
         uses: actions/setup-node@v1
         with:
-          node-version: '15.9.0'
+          node-version: '16.13.1'
 
       #  安装依赖
       - name: Install dependencies
