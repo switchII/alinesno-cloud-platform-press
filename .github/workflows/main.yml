@@ -28,10 +28,10 @@ jobs:
 
       #  安装依赖
       - name: Install dependencies
-        run: npm install
+        run: npx install
 
       - name: Build Docs
-        run: npm run docs:build
+        run: npx run docs:build
 
       # upload to github
       - name: Deploy to GitHub Pages
