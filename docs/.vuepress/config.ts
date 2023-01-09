@@ -1,15 +1,20 @@
 import { defineUserConfig } from 'vuepress'
-import { viteBundler } from '@vuepress/bundler-vite'
-import { localTheme } from './theme'
 
-import { nprogressPlugin } from '@vuepress/plugin-nprogress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
-import { docsearchPlugin } from "@vuepress/plugin-docsearch"
-
 import { feedPlugin } from "vuepress-plugin-feed2";
+import { getDirname, path } from '@vuepress/utils'
+import { defaultTheme, defineUserConfig } from 'vuepress'
+
+const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
+  alias: {
+      '@theme/HomeHero.vue': path.resolve(__dirname, './theme/components/Home.vue'),
+      '@theme/HomeFeatures.vue': path.resolve(__dirname, './theme/components/MyHomeFooter.vue'),
+      '@theme/HomeContent.vue': path.resolve(__dirname, './theme/components/MyHomeFooter.vue'),
+      '@theme/HomeFooter.vue': path.resolve(__dirname, './theme/components/MyHomeFooter.vue'),
+  },
     lang: 'zh-CN',
     title: 'ACP数字中台',
     description: '能够灵活满足企业数字化建设中各种场景的需要，更高效、专注的沉淀业务和数据能力，进而形成企业的业务和数据中台。通过能力的灵活组合，快速的应对当前快节奏的市场需求，助力企业数字化转型的成功。',
@@ -18,10 +23,6 @@ export default defineUserConfig({
         ['link', { rel: 'icon', href: '/favicon.png' }] ,
         ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.css' }]
     ],
-    bundler: viteBundler({
-        viteOptions: {},
-        vuePluginOptions: {},
-    }),
     plugins: [
         feedPlugin({
             // 插件选项
@@ -30,81 +31,29 @@ export default defineUserConfig({
             atom: true ,
             rss: true ,
         }),
-        mediumZoomPlugin({
-            // 配置项
-        }),
-        docsearchPlugin({
-            appId: 'HAT6A1ER66',
-            apiKey: '1c5e0970f29dd7423d668b1fd245a7e2',
-            indexName: 'acp_linesno',
-            searchParameters: {
-                facetFilters: ['tags:v2'],
-            },
-            locales: {
-                "/": {
-                    placeholder: "搜索文档",
-                    translations: {
-                        button: {
-                            buttonText: '搜索文档',
-                            buttonAriaLabel: '搜索文档',
-                        },
-                        modal: {
-                            searchBox: {
-                                resetButtonTitle: '清除查询条件',
-                                resetButtonAriaLabel: '清除查询条件',
-                                cancelButtonText: '取消',
-                                cancelButtonAriaLabel: '取消',
-                            },
-                            startScreen: {
-                                recentSearchesTitle: '搜索历史',
-                                noRecentSearchesText: '没有搜索历史',
-                                saveRecentSearchButtonTitle: '保存至搜索历史',
-                                removeRecentSearchButtonTitle: '从搜索历史中移除',
-                                favoriteSearchesTitle: '收藏',
-                                removeFavoriteSearchButtonTitle: '从收藏中移除',
-                            },
-                            errorScreen: {
-                                titleText: '无法获取结果',
-                                helpText: '你可能需要检查你的网络连接',
-                            },
-                            footer: {
-                                selectText: '选择',
-                                navigateText: '切换',
-                                closeText: '关闭',
-                                searchByText: '搜索提供者',
-                            },
-                            noResultsScreen: {
-                                noResultsText: '无法找到相关结果',
-                                suggestedQueryText: '你可以尝试查询',
-                                reportMissingResultsText: '你认为该查询应该有结果？',
-                                reportMissingResultsLinkText: '点击反馈',
-                            },
-                        },
-                    },
-                },
-            },
-        }),
         // 谷歌分析
         googleAnalyticsPlugin({
             // 配置项
             id: 'G-V0D6KNXG35',
         }),
-        // 请求加载
-        nprogressPlugin(),
     ],
-
-    theme: localTheme({
+    theme: defaultTheme({
         logo: '/logo.png', // 注意图片放在 public 文件夹下
         docsDir: 'docs',
         repo: 'https://github.com/alinesno-cloud/alinesno-cloud-platform-press',
         repoLabel: 'Github',
         docsBranch: '2.1.2',
         editLink: true,
-        // editLinkText: '编辑页面',
+        editLinkText: '编辑页面',
         sidebarDepth: 0,
         lastUpdated: true,
         lastUpdatedText: 'Last Updated',
         contributors: false,
+        plugins: [
+            mediumZoomPlugin({
+            // 配置项
+            }),
+        ],
         navbar: [
             // 嵌套 Group - 最大深度为 2
             {
@@ -542,9 +491,8 @@ export default defineUserConfig({
                 }
             ]
         }
-    }),
-});
-
+    })
+})
 
 /**
  * 视频教程菜单列表
@@ -1811,5 +1759,4 @@ function genTransferDevopsSidebar() {
         return i
     })
 }
-
 

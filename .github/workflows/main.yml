@@ -29,15 +29,15 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }} 🔧
         uses: actions/setup-node@v1
         with:
-          node-version: '15.9.0' 
+          node-version: '15.9.0'
 
       #  安装依赖
-      - name: Install dependencies 
+      - name: Install dependencies
         run: npm i
-  
+
       - name: Build Docs
         run: npm run docs:build
-       
+
       # upload to github
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2

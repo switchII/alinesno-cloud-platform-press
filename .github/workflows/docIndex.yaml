@@ -1,10 +1,10 @@
 name: algolia-scraper
 
-on:
-  workflow_run:
-    workflows: ['Publish page']
-    types:
-      - completed
+# on:
+  # workflow_run:
+    # workflows: ['Publish page']
+    # types:
+      # - completed
 
 jobs:
   scrape:
