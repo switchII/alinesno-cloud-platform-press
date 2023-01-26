@@ -797,8 +797,7 @@ function genMonitorSidebar() {
     const mapArr = [
         // '/technique/07_质量监控/',
         '/technique/07_质量监控/06_prometheus监控.md',
-        '/technique/07_质量监控/01_ContiPerf压力测试.md',
-        '/technique/07_质量监控/03_链路跟踪.md'
+        '/technique/07_质量监控/01_ContiPerf压力测试.md'
     ]
     return mapArr.map(i => {
         return i

@@ -26,11 +26,17 @@ jobs:
         with:
           persist-credentials: false
 
-      #  安装依赖
-      - name: Install dependencies
-        run: npm install
+      - name: Use Node.js ${{ matrix.node-version }} 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.17.0'
+
+      - name: Install Dependencies
+        run: npm i
 
       - name: Build Docs
+        env:
+          NODE_OPTIONS: "--max-old-space-size=8192"
         run: npm run docs:build
 
       # upload to github
@@ -59,4 +65,5 @@ jobs:
           push: true
           tags: ${{ env.DOCKER_HUB_NAMESPACE }}/${{ env.PRO_NAME }}:${{ env.PRO_VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
-       # -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 部署到docker-hub _end >>>>>>>>>>>>>>>>>>>>>>>>>>
+            # -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 部署到docker-hub _end >>>>>>>>>>>>>>>>>>>>>>>>>>
+
