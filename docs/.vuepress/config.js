@@ -5,7 +5,7 @@ module.exports = {
     base: '/',
     head: [
         ['link', { rel: 'icon', href: '/favicon.png' }],
-        ['link', { rel: 'stylesheet', href: 'http://static.cloud.linesno.com/asserts/vendors/fontawesome/css/all.css' }]
+        ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.css' }]
     ],
     plugins: [
         ['@vuepress/active-header-links'],
@@ -15,11 +15,11 @@ module.exports = {
             }
         ],
         ['@vuepress/nprogress'] ,
-        ['@vuepress/back-to-top'] , 
+        ['@vuepress/back-to-top'] ,
         ['@vuepress/active-header-links', {
             sidebarLinkSelector: '.sidebar-link',
             headerAnchorSelector: '.header-anchor'
-        }] , 
+        }] ,
         ['@vuepress/medium-zoom']
     ],
     themeConfig: {
