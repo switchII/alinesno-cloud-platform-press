@@ -1,41 +1,38 @@
-import { defineUserConfig } from 'vuepress'
-
-import { getDirname, path } from '@vuepress/utils'
-import { defaultTheme, defineUserConfig } from 'vuepress'
-
-const __dirname = getDirname(import.meta.url)
-
-export default defineUserConfig({
-  alias: {
-      '@theme/HomeHero.vue': path.resolve(__dirname, './theme/components/Home.vue'),
-      '@theme/HomeFeatures.vue': path.resolve(__dirname, './theme/components/MyHomeFooter.vue'),
-      '@theme/HomeContent.vue': path.resolve(__dirname, './theme/components/MyHomeFooter.vue'),
-      '@theme/HomeFooter.vue': path.resolve(__dirname, './theme/components/MyHomeFooter.vue'),
-  },
+module.exports = {
     lang: 'zh-CN',
     title: 'ACP数字中台',
     description: '能够灵活满足企业数字化建设中各种场景的需要，更高效、专注的沉淀业务和数据能力，进而形成企业的业务和数据中台。通过能力的灵活组合，快速的应对当前快节奏的市场需求，助力企业数字化转型的成功。',
     base: '/',
     head: [
-        ['link', { rel: 'icon', href: '/favicon.png' }] ,
-        ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.css' }]
+        ['link', { rel: 'icon', href: '/favicon.png' }],
+        ['link', { rel: 'stylesheet', href: 'http://static.cloud.linesno.com/asserts/vendors/fontawesome/css/all.css' }]
     ],
     plugins: [
+        ['@vuepress/active-header-links'],
+        [
+            '@vuepress/google-analytics', {
+                'ga': 'G-V0D6KNXG35' // UA-00000000-0
+            }
+        ],
+        ['@vuepress/nprogress'] ,
+        ['@vuepress/back-to-top'] , 
+        ['@vuepress/active-header-links', {
+            sidebarLinkSelector: '.sidebar-link',
+            headerAnchorSelector: '.header-anchor'
+        }] , 
+        ['@vuepress/medium-zoom']
     ],
-    theme: defaultTheme({
+    themeConfig: {
         logo: '/logo.png', // 注意图片放在 public 文件夹下
-        docsDir: 'docs',
+        lastUpdated: 'Last Updated',
+        sidebarDepth: 1,
         repo: 'https://github.com/alinesno-cloud/alinesno-cloud-platform-press',
         repoLabel: 'Github',
-        docsBranch: '2.1.2',
-        editLink: true,
-        editLinkText: '编辑页面',
-        sidebarDepth: 0,
-        lastUpdated: true,
-        lastUpdatedText: 'Last Updated',
-        contributors: false,
-        navbar: [
-            // 嵌套 Group - 最大深度为 2
+        docsBranch: '2.1.3-Alpha',
+        editLinks: true,
+        editLinkText: '帮助我们改善此页面',
+        smoothScroll: true ,
+        nav: [
             {
                 text: '首页',
                 link: '/'
@@ -50,7 +47,7 @@ export default defineUserConfig({
             },
             {
                 text: '数字建设',
-                children: [
+                items: [
                     { text: '数字规划', link: '/design/overview/' },
                     { text: '组织架构', link: '/group/01_部门建设/' },
                     { text: '研发架构', link: '/framework/' },
@@ -63,7 +60,7 @@ export default defineUserConfig({
             },
             {
                 text: '开发者',
-                children: [
+                items: [
                     { text: '新手入门', link: '/firstlearn/' },
                     { text: '前端手册', link: '/front/' },
                     { text: '后端手册', link: '/technique/' },
@@ -77,402 +74,398 @@ export default defineUserConfig({
             {
                 text: '中台演示',
                 link: 'http://alinesno-saas.beta.linesno.com'
-            },
+            }
         ],
         sidebar: {
             '/firstlearn/': [
                 {
-                    text: '新手入门',
+                    title: '新手入门',
                     collapsible: true,
                     children: genFirestLearnSidebar(1)
                 },
                 {
-                    text: '第一个任务',
+                    title: '第一个任务',
                     collapsible: true,
                     children: genFirestLearnSidebar(5)
                 },
                 {
-                    text: '中台运营',
+                    title: '中台运营',
                     collapsible: true,
                     children: genFirestLearnSidebar(8)
                 },
                 {
-                    text: '业务集成',
+                    title: '业务集成',
                     collapsible: true,
                     children: genFirestLearnSidebar(3)
                 },
                 {
-                    text: '数据集成',
+                    title: '数据集成',
                     collapsible: true,
                     children: genFirestLearnSidebar(4)
                 }
             ],
             '/prices/': [
                 {
-                    text: '服务说明',
+                    title: '服务说明',
                     collapsible: true,
                     children: genPricesSidebar(0)
                 },
                 {
-                    text: '关于我们',
+                    title: '关于我们',
                     collapsible: true,
                     children: genPricesSidebar(1)
                 }
             ],
             '/display/': [
                 {
-                    text: '中台演示',
+                    title: '中台演示',
                     collapsible: true,
                     children: genSolutionPlatformSidebar()
                 },
             ],
             '/design/overview': [
                 {
-                    text: '中台介绍',
+                    title: '中台介绍',
                     collapsible: true,
                     children: genDesignSidebar(1)
                 },
             ],
             '/design/technique': [
                 {
-                    text: '平台介绍',
+                    title: '平台介绍',
                     collapsible: false,
                     children: genTechniqueSidebar()
                 }
             ],
             '/iot/': [
                 {
-                    text: '行业需求',
+                    title: '行业需求',
                     collapsible: true,
                     children: genSectorDemandSidebar()
                 },
                 {
-                    text: '物联网架构设计',
+                    title: '物联网架构设计',
                     collapsible: true,
                     children: genIotSystemSidebar()
                 },
                 {
-                    text: '功能架构规划',
+                    title: '功能架构规划',
                     collapsible: true,
                     children: genFunctionPlanSidebar()
                 },
                 {
-                    text: '场景集成',
+                    title: '场景集成',
                     collapsible: true,
                     children: genSceneSidebar()
                 }
             ],
             '/framework/': [
                 {
-                    text: '平台介绍',
+                    title: '平台介绍',
                     collapsible: true,
                     children: genFrameworkAboutSidebar()
                 },
                 {
-                    text: '平台需求',
+                    title: '平台需求',
                     collapsible: true,
                     children: genFrameworkRequireSidebar()
                 },
                 {
-                    text: '平台架构',
+                    title: '平台架构',
                     collapsible: true,
                     children: genFrameworkSidebar()
                 },
                 {
-                    text: '服务规划',
+                    title: '服务规划',
                     collapsible: true,
                     children: genServiceSidebar()
                 }
             ],
             '/front/': [
                 {
-                    text: '环境搭建',
+                    title: '环境搭建',
                     collapsible: true,
                     children: genFrontEnvSidebar()
                 },
                 {
-                    text: '开发技术',
+                    title: '开发技术',
                     collapsible: true,
                     children: genFrontSidebar()
                 }
             ],
             '/operation': [
                 {
-                    text: '部署规划',
+                    title: '部署规划',
                     collapsible: true,
                     children: genAutoOperationSidebar()
                 },
                 {
-                    text: '数字中台',
+                    title: '数字中台',
                     collapsible: true,
                     children: genBaseServiceSidebar()
                 },
                 {
-                    text: '容器镜像',
+                    title: '容器镜像',
                     collapsible: true,
                     children: genManagerContainerSidebar()
                 },
                 {
-                    text: '管理环境',
+                    title: '管理环境',
                     collapsible: true,
                     children: genManagerOperationSidebar()
                 },
                 {
-                    text: '基础软件',
+                    title: '基础软件',
                     collapsible: true,
                     children: genBaseSoftwareSidebar()
                 },
                 {
-                    text: '数据环境',
+                    title: '数据环境',
                     collapsible: true,
                     children: genDataEnvironmentSidebar()
                 }
             ],
             '/env/development/': [
                 {
-                    text: '研发中台安装',
+                    title: '研发中台安装',
                     collapsible: true,
                     children: genBaseServiceSidebar()
                 },
             ],
             '/data/onedata/': [
                 {
-                    text: '数据治理',
+                    title: '数据治理',
                     collapsible: true,
                     children: genDataToolsSidebar(1)
                 },
             ],
             '/data/framework/': [
                 {
-                    text: '架构设计',
+                    title: '架构设计',
                     collapsible: true,
                     children: genDataFrameworkSidebar()
                 },
                 {
-                    text: '数仓设计',
+                    title: '数仓设计',
                     collapsible: true,
                     children: genDataWarehouseDesignSidebar()
                 },
                 {
-                    text: '数仓采集',
+                    title: '数仓采集',
                     collapsible: true,
                     children: genDataWarehouseCollectSidebar()
                 },
                 {
-                    text: '数仓分析',
+                    title: '数仓分析',
                     collapsible: true,
                     children: genDataWarehouseAnalyzeSidebar()
                 }
             ],
             '/platform/': [
                 {
-                    text: '产品体系',
+                    title: '产品体系',
                     collapsible: true,
                     children: genPlatformBusinessSidebar(1)
                 },
                 {
-                    text: '技术引擎',
+                    title: '技术引擎',
                     collapsible: true,
                     children: genPlatformBusinessSidebar(2)
                 },
                 {
-                    text: '基础服务',
+                    title: '基础服务',
                     collapsible: true,
                     children: genPlatformBusinessSidebar(3)
                 },
                 {
-                    text: '数据治理',
+                    title: '数据治理',
                     collapsible: true,
                     children: genPlatformBusinessSidebar(5)
                 },
                 {
-                    text: '运维监控',
+                    title: '运维监控',
                     collapsible: true,
                     children: genPlatformBusinessSidebar(6)
                 }
             ],
             '/solution/': [
                 {
-                    text: '解决方案体系',
+                    title: '解决方案体系',
                     collapsible: true,
                     children: genSolutionSidebar(0)
                 },
                 {
-                    text: '场景解决方案',
+                    title: '场景解决方案',
                     collapsible: true,
                     children: genSolutionSidebar(2)
                 }
             ],
             '/group/': [
                 {
-                    text: '团队建设',
+                    title: '团队建设',
                     collapsible: true,
                     children: genGroupDeptSidebar()
                 },
                 {
-                    text: '组织架构',
+                    title: '组织架构',
                     collapsible: true,
                     children: genGroupRuleSidebar(0)
                 },
                 {
-                    text: '质量体系',
+                    title: '质量体系',
                     collapsible: true,
                     children: genGroupRuleSidebar(2)
                 },
             ],
             '/business/': [
                 {
-                    text: '项目组织',
+                    title: '项目组织',
                     collapsible: true,
                     children: genBusinessSidebar()
                 },
                 {
-                    text: '业务集成',
+                    title: '业务集成',
                     collapsible: true,
                     children: genBusinessBuildSidebar()
                 }
             ],
             '/technique/': [
                 {
-                    text: '目录规划',
+                    title: '目录规划',
                     collapsible: true,
                     children: genCatalogSidebar()
                 },
                 {
-                    text: '环境搭建',
+                    title: '环境搭建',
                     collapsible: true,
                     children: genEnvironmentSidebar()
                 },
                 {
-                    text: '代码生成器',
+                    title: '代码生成器',
                     collapsible: true,
                     children: genCodeGenSidebar()
                 },
                 {
-                    text: '开发接入',
+                    title: '开发接入',
                     collapsible: true,
                     children: genAccessSidebar()
                 },
                 {
-                    text: '开发规范',
+                    title: '开发规范',
                     collapsible: true,
                     children: genStandardSidebar()
                 },
                 {
-                    text: '开发技术',
+                    title: '开发技术',
                     collapsible: true,
                     children: genDevTechniqueSidebar()
                 },
                 {
-                    text: '运维监控',
+                    title: '运维监控',
                     collapsible: true,
                     children: genMonitorSidebar()
                 },
                 {
-                    text: '分布式技术',
+                    title: '分布式技术',
                     collapsible: true,
                     children: genDubboSidebar()
                 },
                 {
-                    text: '单点登陆',
+                    title: '单点登陆',
                     collapsible: true,
                     children: genSSOSidebar()
                 },
-                // {
-                // text: '中台能力',
-                // collapsible: true,
-                // children: genGatewayOpenSidebar()
-                // },
                 {
-                    text: '分布式消息',
+                    title: '分布式消息',
                     collapsible: true,
                     children: genMessageSidebar()
                 },
                 {
-                    text: '网关服务',
+                    title: '网关服务',
                     collapsible: true,
                     children: genGatewaySidebar()
                 },
                 {
-                    text: '通知服务',
+                    title: '通知服务',
                     collapsible: true,
                     children: genNoticeSidebar()
                 },
                 {
-                    text: '分布式存储',
+                    title: '分布式存储',
                     collapsible: true,
                     children: genStorageSidebar()
                 },
                 {
-                    text: '审计日志',
+                    title: '审计日志',
                     collapsible: true,
                     children: genWatcherDevopsSidebar()
                 },
                 {
-                    text: '预警监控',
+                    title: '预警监控',
                     collapsible: true,
                     children: genTransferDevopsSidebar()
                 }
             ],
             '/dataskill/': [
                 {
-                    text: '目录规划',
+                    title: '目录规划',
                     collapsible: true,
                     children: genDataSkillPlanSidebar()
                 },
                 {
-                    text: '环境搭建',
+                    title: '环境搭建',
                     collapsible: true,
                     children: genDataSkillEnvSidebar()
                 },
                 {
-                    text: '数据上报服务',
+                    title: '数据上报服务',
                     collapsible: true,
                     children: genDataSkillReportSidebar()
                 },
                 {
-                    text: '数据集成服务',
+                    title: '数据集成服务',
                     collapsible: true,
                     children: genDataIntegrationSidebar()
-                } ,
+                },
                 {
-                    text: '主数据管理',
+                    title: '主数据管理',
                     collapsible: true,
                     children: genDataManSidebar()
                 },
                 {
-                    text: '数据开发服务',
+                    title: '数据开发服务',
                     collapsible: true,
                     children: genDataSkillDevSidebar()
                 }
             ],
             '/learn/': [
                 {
-                    text: '人才团队建设',
+                    title: '人才团队建设',
                     collapsible: true,
                     children: genLearnSidebar(1)
                 },
                 {
-                    text: '企业中台建设',
+                    title: '企业中台建设',
                     collapsible: true,
                     children: genLearnSidebar(2)
                 },
                 {
-                    text: '过程培训文档',
+                    title: '过程培训文档',
                     collapsible: true,
                     children: genLearnSidebar(3)
                 }
             ],
             '/about/': [
                 {
-                    text: '关于',
+                    title: '关于',
                     collapsible: false,
                     children: genAboutSidebar()
                 }
             ]
         }
-    })
-})
+    },
+}
+
 
 /**
  * 视频教程菜单列表
@@ -525,9 +518,9 @@ function genLearnSidebar(menus) {
 }
 
 /**
- * 物联网中台架构建设
- * @returns
- */
+* 物联网中台架构建设
+* @returns
+*/
 function genSectorDemandSidebar() {
     const mapArr = ['/iot/', '/iot/plan.md']
     return mapArr.map(i => {
@@ -536,12 +529,12 @@ function genSectorDemandSidebar() {
 }
 
 /**
- *
- * @param {概述} type
- * @returns
- */
+*
+* @param {概述} type
+* @returns
+*/
 function genFirestLearnSidebar(type) {
-    var mapArr: string[] = []
+    var mapArr = []
 
     if (type == 0) {
     } else if (type == 1) {
@@ -593,7 +586,7 @@ function genFirestLearnSidebar(type) {
             '/firstlearn/task/05_引入其它组件.md',
             '/firstlearn/task/06_完成第一天任务.md'
         ]
-    } else if(type == 8){
+    } else if (type == 8) {
         mapArr = [
             '/firstlearn/28_中台运营管理.md',
             '/firstlearn/29_研发调用体系.md',
@@ -637,9 +630,9 @@ function genSceneSidebar() {
 }
 
 /**
- * 自动化运维管理
- * @returns
- */
+* 自动化运维管理
+* @returns
+*/
 function genAutoOperationSidebar() {
     const mapArr = [
         '/operation/',
@@ -651,9 +644,9 @@ function genAutoOperationSidebar() {
 }
 
 /**
- * 容器镜像
- * @returns
- */
+* 容器镜像
+* @returns
+*/
 function genManagerContainerSidebar() {
     const mapArr = [
         '/operation/35_container/01_镜像规划.md',
@@ -713,9 +706,9 @@ function genDataEnvironmentSidebar() {
 }
 
 /**
- * 研发手册
- * @returns
- */
+* 研发手册
+* @returns
+*/
 function genCatalogSidebar() {
     const mapArr = ['/technique/']
     return mapArr.map(i => {
@@ -798,8 +791,8 @@ function genDevTechniqueSidebar() {
 }
 
 /**
- * 运维监控
- */
+* 运维监控
+*/
 function genMonitorSidebar() {
     const mapArr = [
         // '/technique/07_质量监控/',
@@ -937,9 +930,9 @@ function genDubboSidebar() {
 }
 
 /**
- *
- * @returns 前端脚本
- */
+*
+* @returns 前端脚本
+*/
 function genFrontEnvSidebar() {
     const mapArr = [
         '/front/'
@@ -950,9 +943,9 @@ function genFrontEnvSidebar() {
 }
 
 /**
- *
- * @returns 前端脚本
- */
+*
+* @returns 前端脚本
+*/
 function genFrontSidebar() {
     const mapArr = [
         '/front/01_新增页面.md',
@@ -977,9 +970,9 @@ function genFrontSidebar() {
 }
 
 /**
- * 业务建设菜单列表
- * @returns
- */
+* 业务建设菜单列表
+* @returns
+*/
 function genBusinessSidebar() {
     const mapArr = [
         '/business/01_方案概述.md',
@@ -1008,9 +1001,9 @@ function genBusinessBuildSidebar() {
 }
 
 /**
- * 组织搭建菜单列表
- * @returns
- */
+* 组织搭建菜单列表
+* @returns
+*/
 function genGroupDeptSidebar() {
     const mapArr = [
         '/group/01_部门建设/'
@@ -1056,9 +1049,9 @@ function genGroupRuleSidebar(type) {
 }
 
 /**
- * 中台连接器说明
- * @returns
- */
+* 中台连接器说明
+* @returns
+*/
 function genConnectReadmeSidebar() {
     const mapArr = ['/connect/00_连接器说明.md']
     return mapArr.map(i => {
@@ -1067,9 +1060,9 @@ function genConnectReadmeSidebar() {
 }
 
 /**
- * 中台连接器列表
- * @returns
- */
+* 中台连接器列表
+* @returns
+*/
 function genConnectListSidebar() {
     const mapArr = [
         '/connect/01_基础权限平台.md',
@@ -1082,8 +1075,8 @@ function genConnectListSidebar() {
 }
 
 /**
- * 技术平台
- */
+* 技术平台
+*/
 function genPlatformBusinessSidebar(type) {
     var mapArr = ['/platform/', '/platform/CHANGELOG.md']
 
@@ -1131,9 +1124,9 @@ function genPlatformsSidebar() {
 }
 
 /**
- * 环境搭建菜单列表
- * @returns
- */
+* 环境搭建菜单列表
+* @returns
+*/
 function genEnvSidebar(menus) {
     if (menus == 1) {
         const mapArr = ['/env/01_方案概述.md']
@@ -1254,9 +1247,9 @@ function genDataOperationSidebar() {
 }
 
 /**
- * 数字规划菜单列表
- * @returns
- */
+* 数字规划菜单列表
+* @returns
+*/
 function genDesignSidebar(menus) {
     if (menus == 1) {
         // 平台介绍
@@ -1271,9 +1264,9 @@ function genDesignSidebar(menus) {
 }
 
 /**
- * 研发平台架构设计
- * @returns
- */
+* 研发平台架构设计
+* @returns
+*/
 function genFrameworkAboutSidebar() {
     const mapArr = ['/framework/']
     return mapArr.map(i => {
@@ -1339,9 +1332,9 @@ function genFrameworkManagerSidebar() {
 }
 
 /**
- * 研发中台方案菜单列表
- * @returns
- */
+* 研发中台方案菜单列表
+* @returns
+*/
 function genTechniqueSidebar() {
     const mapArr = ['/design/technique/01_方案概述.md']
     return mapArr.map(i => {
@@ -1350,9 +1343,9 @@ function genTechniqueSidebar() {
 }
 
 /**
- * 组件演示
- * @returns
- */
+* 组件演示
+* @returns
+*/
 function genSolutionComponentSidebar() {
     const mapArr = [
         '/display/component/01_统一权限服务.md',
@@ -1380,9 +1373,9 @@ function genSolutionComponentSidebar() {
 }
 
 /**
- * 运维组件演示
- * @returns
- */
+* 运维组件演示
+* @returns
+*/
 function genSolutionOperationSidebar() {
     const mapArr = [
         '/display/component/19_审计日志监控服务.md',
@@ -1394,9 +1387,9 @@ function genSolutionOperationSidebar() {
 }
 
 /**
- * 获取关于我们的菜单列表
- * @returns
- */
+* 获取关于我们的菜单列表
+* @returns
+*/
 function genAboutSidebar() {
     const mapArr = ['/about/01_方案概述.md']
     return mapArr.map(i => {
@@ -1535,15 +1528,15 @@ function genOperationServiceSidebar() {
 }
 
 /**
- * 解决方案
- * @param {场景类型} menus
- * @returns
- */
+* 解决方案
+* @param {场景类型} menus
+* @returns
+*/
 function genSolutionSidebar(menus) {
     if (menus == 0) {
         // 平台介绍
         const mapArr = [
-            '/solution/' ,
+            '/solution/',
             '/solution/26_企业数字中台整体方案.md',
         ]
 
@@ -1597,15 +1590,15 @@ function genSolutionSidebar(menus) {
 }
 
 /**
- * 商业授权
- * @param {场景类型} menus
- * @returns
- */
+* 商业授权
+* @param {场景类型} menus
+* @returns
+*/
 function genPricesSidebar(menus) {
     if (menus == 0) {
         // 平台介绍
         const mapArr = ['/prices/',
-            '/prices/03_服务内容.md' ,
+            '/prices/03_服务内容.md',
             '/prices/02_授权协议.md'
         ]
 
@@ -1625,7 +1618,7 @@ function genPricesSidebar(menus) {
     }
 }
 
-function genDataSkillPlanSidebar(){
+function genDataSkillPlanSidebar() {
     const mapArr = [
         '/dataskill/'
     ]
@@ -1635,7 +1628,7 @@ function genDataSkillPlanSidebar(){
 
 }
 
-function genDataSkillEnvSidebar(){
+function genDataSkillEnvSidebar() {
     const mapArr = [
         '/dataskill/01_env/01_开发环境要求.md'
     ]
@@ -1657,7 +1650,7 @@ function genDataSkillReportSidebar() {
 
 }
 
-function genDataIntegrationSidebar(){
+function genDataIntegrationSidebar() {
     const mapArr = [
         '/dataskill/03_dataintegration/01_数据集成架构.md',
         '/dataskill/03_dataintegration/02_当前集成功能.md',
@@ -1669,7 +1662,7 @@ function genDataIntegrationSidebar(){
 
 }
 
-function genDataManSidebar(){
+function genDataManSidebar() {
     const mapArr = [
         '/dataskill/04_datamanage/01_主数据集成架构.md',
         '/dataskill/04_datamanage/02_主数据使用场景.md',
@@ -1694,9 +1687,9 @@ function genDataSkillDevSidebar() {
 }
 
 /**
- * 处理解决方案菜单列表
- * @returns
- */
+* 处理解决方案菜单列表
+* @returns
+*/
 function genSolutionPlatformSidebar() {
     const mapArr = [
         '/display/'
@@ -1708,8 +1701,8 @@ function genSolutionPlatformSidebar() {
 }
 
 /**
- * 审计日志监控
- */
+* 审计日志监控
+*/
 function genWatcherDevopsSidebar() {
     const mapArr = [
         '/technique/22_审计日志监控/01_应用场景.md',
@@ -1725,8 +1718,8 @@ function genWatcherDevopsSidebar() {
 }
 
 /**
- * 预警监控
- */
+* 预警监控
+*/
 function genTransferDevopsSidebar() {
     const mapArr = [
         '/technique/23_应用监控预警服务/01_应用监控预警场景.md',
@@ -1739,4 +1732,3 @@ function genTransferDevopsSidebar() {
         return i
     })
 }
-

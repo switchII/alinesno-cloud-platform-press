@@ -85,7 +85,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="stylus" scoped>
 .wb-zc-ybmod-brand-mod3-pc J_Module {
   margin-top: 30px;
 }

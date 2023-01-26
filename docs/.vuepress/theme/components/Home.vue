@@ -29,11 +29,7 @@
 
     <div class="features-box" style="background-color:rgb(244, 244, 244)">
       <div v-if="functionAll.length" class="features" style="background-color:rgb(244, 244, 244)">
-        <div
-          v-for="(feature, index) in functionAll"
-          :key="index"
-          class="feature"
-        >
+        <div v-for="(feature, index) in functionAll" :key="index" class="feature">
           <div class="title-icon">
             <i :class="feature.icon"></i>
           </div>
@@ -43,7 +39,8 @@
       </div>
     </div>
 
-    <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto" style="background-color:#fff;padding-bottom:0px;">
+    <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto"
+      style="background-color:#fff;padding-bottom:0px;">
       <div class="container text-center td-arrow-down">
         <span class="h4 mb-0">
           <h3 style="color:#555">ACP 可以帮助我做什么</h3>
@@ -54,11 +51,7 @@
 
     <div class="features-box" style="background-color:#fff;padding-bottom:6rem">
       <div v-if="helpAll.length" class="features" style="background-color:#fff">
-        <div
-          v-for="(feature, index) in helpAll"
-          :key="index"
-          class="feature"
-        >
+        <div v-for="(feature, index) in helpAll" :key="index" class="feature">
           <div class="title-icon">
             <!--
             <img :src="$withBase('/svg/' + feature.icon)" />
@@ -70,29 +63,26 @@
         </div>
       </div>
 
-      <div style="position: relative;width: 1024px;margin: auto;">
+      <div style="position: relative;max-width: 1024px;margin: auto;">
         <img :src="$withBase('/framework/02_acp_product_arc.jpg')" style="width: 100%;margin: auto;">
       </div>
 
     </div>
 
-    <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto" style="background-color:rgb(255 124 0)">
+    <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto"
+      style="background-color:rgb(255 124 0)">
       <div class="container text-center td-arrow-down">
         <span class="h4 mb-0">
           <h3>产品功能</h3>
           <p>为业务上层提供基础的数字化架构，规范化的开发，为后期业务的沉淀 形成基础，更好的沉淀企业资产,业务架构师的规划， 进行核心业务的改造和各个业务线的整合，形成行业的业务标准和 一套解决方案，形成自己的核心竞争力
-            </p>
+          </p>
         </span>
       </div>
     </section>
 
     <div class="features-box" style="padding:6rem 0">
       <div v-if="featuresAll.length" class="features">
-        <div
-          v-for="(feature, index) in featuresAll"
-          :key="index"
-          class="feature"
-        >
+        <div v-for="(feature, index) in featuresAll" :key="index" class="feature">
           <div class="title-icon">
             <i :class="feature.icon"></i>
           </div>
@@ -116,11 +106,11 @@
 <script>
 import HomeService from './HomeService.vue'
 import FooterTemp from './Footer.vue'
-import AutoLink from '@theme/AutoLink.vue'
+// import AutoLink from '@theme/AutoLink.vue'
 
 export default {
   components: {
-    AutoLink ,
+    // AutoLink ,
     HomeService,
     FooterTemp
   },
@@ -246,14 +236,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-// @import '~@default-theme/styles/config.styl';
-
-$accentColor: #005bd4;
-$textColor:#000;
-$navbarHeight: 65px ;
-$MQMobile: 600px ;
-$MQMobileNarrow: 600px;
+<style lang="stylus">
 
 .home {
   padding: $navbarHeight 0rem 0;
@@ -510,5 +493,30 @@ $MQMobileNarrow: 600px;
     }
 
 }
+
+@media all and (max-width:719px) {
+
+  .td-box--primary .td-arrow-down , .des , .description{
+    padding: 0px 20px !important ;
+    }
+
+    .des{
+     width: calc(100% - 50px) !important ;
+      }
+
+  .wb-zc-ybmod-brand-mod2-pc .module-wrap{
+    min-width: auto !important ;
+    width: 100% !important ;
+
+    .col{
+      width: 100% !important ;
+      }
+
+    .colli{
+      width:calc(100% - 76px) !important ;
+      margin-bottom: 10px !important ; 
+      }
+  }
+ }
 
 </style>

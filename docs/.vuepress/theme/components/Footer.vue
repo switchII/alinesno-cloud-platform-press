@@ -114,7 +114,7 @@
   </footer>
 </template>
 
-<style lang="scss" scoped>
+<style lang="stylus" scoped>
 .footer-page {
   float: left;
   background: #eef1f6 none repeat center top;

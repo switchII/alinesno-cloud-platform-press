@@ -1,22 +1,21 @@
 {
-    "name": "alinenso-cloud-platform-press",
-    "version": "2.1.0",
-    "description": "ACP中台服务（Alinesno Cloud Platform）是业务应用生命周期管理和监控的新一代中台",
+    "name": "alinesno-cloud-platform-press",
+    "version": "2.1.3-Alpha",
+    "description": "ACP数字中台产品总体设计稿",
     "main": "index.js",
-    "repository": "https://github.com/alinesno-cloud/alinesno-cloud-platform-press",
-    "author": "weixiaojin",
-    "license": "Apache-2.0",
+    "author": "LuoXiaoDong",
+    "license": "GPLv3",
+    "private": true,
     "scripts": {
         "docs:dev": "vuepress dev docs",
-        "docs:build": "vuepress build docs",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "lint-staged": {
-        "*.{json,css,md,vue}": [
-            "git add"
-        ]
+        "docs:build": "vuepress build docs"
     },
     "devDependencies": {
-        "vuepress": "^2.0.0-beta.60"
+        "@vuepress/plugin-active-header-links": "^1.9.8",
+        "@vuepress/plugin-back-to-top": "^1.9.8",
+        "@vuepress/plugin-google-analytics": "^2.0.0-beta.60",
+        "@vuepress/plugin-medium-zoom": "^1.9.8",
+        "@vuepress/plugin-nprogress": "^1.9.8",
+        "vuepress": "^1.9.8"
     }
 }
