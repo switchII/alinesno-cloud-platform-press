@@ -17,5 +17,8 @@
         "@vuepress/plugin-medium-zoom": "^1.9.8",
         "@vuepress/plugin-nprogress": "^1.9.8",
         "vuepress": "^1.9.8"
+    },
+    "dependencies": {
+        "vue": "^2.7.14"
     }
 }
