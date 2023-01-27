@@ -100,7 +100,7 @@
           <p class="footer-title">合作伙伴</p>
         </div>
       </div>
-      <div class="footer-copyright" style="font-size: 1rem">
+      <div class="footer-copyright" style="font-size: .9rem">
         版权所有 ©
         <strong id="copyrightYear">
           {{ new Date().getFullYear() }}
@@ -146,7 +146,7 @@
 
     .footer-text-product {
       color: rgb(51, 51, 51);
-      font-size: 1rem;
+      font-size: .9rem;
     }
 
     p {
@@ -155,7 +155,7 @@
 
     .footer-text {
       color: rgb(51, 51, 51);
-      font-size: 1rem;
+      font-size: .9rem;
       display: table-cell;
       line-height: 2.1em;
       padding-top: 10px;

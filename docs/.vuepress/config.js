@@ -14,6 +14,7 @@ module.exports = {
                 'ga': 'G-V0D6KNXG35' // UA-00000000-0
             }
         ],
+        ['vuepress-plugin-code-copy', true] ,
         ['@vuepress/nprogress'] ,
         ['@vuepress/back-to-top'] ,
         ['@vuepress/active-header-links', {
@@ -27,6 +28,7 @@ module.exports = {
         lastUpdated: 'Last Updated',
         sidebarDepth: 1,
         repo: 'https://github.com/alinesno-cloud/alinesno-cloud-platform-press',
+        docsDir: 'docs',
         repoLabel: 'Github',
         docsBranch: '2.1.3-Alpha',
         editLinks: true,

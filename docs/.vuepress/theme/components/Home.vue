@@ -2,16 +2,23 @@
   <div class="home">
 
     <div class="hero">
-      <img v-if="data.heroImage" :src="$withBase(data.heroImage)" alt="hero" />
+      <img
+        v-if="data.heroImage"
+        :src="$withBase(data.heroImage)"
+        :alt="data.heroAlt || 'hero'"
+      >
 
       <h1>{{ title }}</h1>
 
       <p class="description">
-        协助中小企业快速平台化、中台化、数字化，中小微团队转型的最佳平台
+        {{ data.tagline || $description || 'Welcome to your VuePress site' }}
       </p>
 
       <p class="action">
-        <a href="/design/overview/" class="nav-link action-button router-link-active">新中台建设模型 →</a>
+        <NavLink
+          class="action-button"
+          :item="actionLink"
+        />
       </p>
     </div>
 
@@ -98,19 +105,17 @@
     <footer-temp />
     <!-- footer_end -->
 
-    <!-- <div v-if="data.footer" class="footer">{{ data.footer }}</div> -->
-
   </div>
 </template>
 
 <script>
 import HomeService from './HomeService.vue'
 import FooterTemp from './Footer.vue'
-// import AutoLink from '@theme/AutoLink.vue'
+import NavLink from '@parent-theme/components/NavLink.vue'
 
 export default {
   components: {
-    // AutoLink ,
+    NavLink ,
     HomeService,
     FooterTemp
   },
