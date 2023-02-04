@@ -314,6 +314,11 @@ module.exports = {
                     children: genGroupRuleSidebar(0)
                 },
                 {
+                    title: '项目管理',
+                    collapsible: true,
+                    children: genGroupRuleSidebar(3)
+                },
+                {
                     title: '质量体系',
                     collapsible: true,
                     children: genGroupRuleSidebar(2)
@@ -1017,7 +1022,6 @@ function genGroupDeptSidebar() {
 function genGroupRuleSidebar(type) {
     var mapArr = [
         '/group/02_管理体系/02_管理概述.md',
-        '/group/02_管理体系/10_项目管理.md',
         '/group/02_管理体系/12_岗位职责.md',
         '/group/02_管理体系/19_能力模型.md',
         '/group/02_管理体系/03_入职流程.md',
@@ -1036,6 +1040,14 @@ function genGroupRuleSidebar(type) {
             '/group/03_考核标准/04_架构师考核.md'
         ]
     }
+
+    if (type == 3) {
+        mapArr = [
+            '/group/03_项目管理/01_项目流程.md',
+            '/group/03_项目管理/02_项目文档.md'
+        ]
+    }
+
 
     if (type == 2) {
         mapArr = [
