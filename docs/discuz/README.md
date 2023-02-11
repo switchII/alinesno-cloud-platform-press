@@ -4,4 +4,4 @@
 > 发布产品最新的动态和项目接入情况，同时也期望收到更多的反馈和建议。
 > 基于issue配置的轻量级动态信息
 
-<Vssue :issue-id="1" :options="{ locale: 'zh' }" />
+<Vssue :issue-id="2" :options="{ locale: 'zh' }" />
