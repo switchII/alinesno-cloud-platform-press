@@ -22,9 +22,10 @@ module.exports = {
             platform: 'github',
             // all other options of Vssue are allowed
             owner: 'alinesno-cloud',
+            admins:['switchII'],
             repo: 'alinesno-cloud-platform-press',
-            clientId: '27af56cba1b05d7313eb',
-            clientSecret: 'ecb6b64de79461454b8033b6c5790e6f8e8a1c87',
+            clientId: 'fc70ba30b2159e36737d',
+            clientSecret: 'd0c0ca2640b538eb35d68f769693fd1da7775033',
         }],
         ['@vuepress/active-header-links', {
             sidebarLinkSelector: '.sidebar-link',
