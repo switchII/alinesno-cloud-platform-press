@@ -84,7 +84,7 @@ module.exports = {
                 link: '/prices/'
             },
             {
-                text: '社区BBS',
+                text: '产品动态',
                 link: '/discuz/'
             },
             {
