@@ -16,8 +16,12 @@
         "@vuepress/plugin-google-analytics": "^2.0.0-beta.60",
         "@vuepress/plugin-medium-zoom": "^1.9.8",
         "@vuepress/plugin-nprogress": "^1.9.8",
-        "vuepress": "^1.9.8",
         "vue": "^2.7.14",
+        "vuepress": "^1.9.8",
         "vuepress-plugin-code-copy": "^1.0.6"
+    },
+    "dependencies": {
+        "@vssue/api-github-v3": "^1.4.7",
+        "@vssue/vuepress-plugin-vssue": "^1.4.8"
     }
 }

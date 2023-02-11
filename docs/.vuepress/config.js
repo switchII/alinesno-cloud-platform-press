@@ -17,6 +17,15 @@ module.exports = {
         ['vuepress-plugin-code-copy', true] ,
         ['@vuepress/nprogress'] ,
         ['@vuepress/back-to-top'] ,
+        ['@vssue/vuepress-plugin-vssue', {
+            // set `platform` rather than `api`
+            platform: 'github',
+            // all other options of Vssue are allowed
+            owner: 'alinesno-cloud',
+            repo: 'alinesno-cloud-platform-press',
+            clientId: '27af56cba1b05d7313eb',
+            clientSecret: 'ecb6b64de79461454b8033b6c5790e6f8e8a1c87',
+        }],
         ['@vuepress/active-header-links', {
             sidebarLinkSelector: '.sidebar-link',
             headerAnchorSelector: '.header-anchor'
@@ -74,7 +83,11 @@ module.exports = {
                 link: '/prices/'
             },
             {
-                text: '中台演示',
+                text: '社区BBS',
+                link: '/discuz/'
+            },
+            {
+                text: '产品体验',
                 link: 'http://alinesno-saas.beta.linesno.com'
             }
         ],
@@ -105,6 +118,13 @@ module.exports = {
                     collapsible: true,
                     children: genFirestLearnSidebar(4)
                 }
+            ],
+            '/discuz/': [
+                {
+                    title: '最新动态',
+                    collapsible: true,
+                    children: genDiscuzSidebar(0)
+                },
             ],
             '/prices/': [
                 {
@@ -473,6 +493,15 @@ module.exports = {
     },
 }
 
+function genDiscuzSidebar(m){
+    const mapArr = [
+        '/discuz/',
+        '/discuz/01_BBS规则.md'
+    ]
+    return mapArr.map(i => {
+        return i
+    })
+}
 
 /**
  * 视频教程菜单列表
