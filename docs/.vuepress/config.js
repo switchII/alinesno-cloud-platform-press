@@ -279,9 +279,14 @@ module.exports = {
                     children: genDataWarehouseCollectSidebar()
                 },
                 {
-                    title: '数仓分析',
+                    title: '数仓计算',
                     collapsible: true,
                     children: genDataWarehouseAnalyzeSidebar()
+                },
+                {
+                    title: '数据安全',
+                    collapsible: true,
+                    children: genDataWarehouseSecSidebar()
                 }
             ],
             '/platform/': [
@@ -772,7 +777,8 @@ function genCodeGenSidebar() {
         '/technique/13_代码生成器/10_通用CURD集成.md',
         '/technique/13_代码生成器/11_示例代码集成.md',
         '/technique/13_代码生成器/12_JWT集成.md',
-        '/technique/13_代码生成器/13_版本管理集成.md'
+        '/technique/13_代码生成器/13_版本管理集成.md',
+        '/technique/13_代码生成器/14_代码模板插件.md'
     ]
     return mapArr.map(i => {
         return i
@@ -1233,6 +1239,17 @@ function genDataWarehouseCollectSidebar() {
         '/data/framework/03_业务数据采集/04_数据采集汇总.md',
         '/data/framework/03_业务数据采集/05_数据维度汇总.md',
         '/data/framework/03_业务数据采集/06_应用数据汇总.md'
+    ]
+    return mapArr.map(i => {
+        return i
+    })
+}
+
+// 数据安全
+function genDataWarehouseSecSidebar() {
+    const mapArr = [
+        '/data/framework/06_数据安全/01_安全架构.md',
+        '/data/framework/06_数据安全/02_安全功能.md'
     ]
     return mapArr.map(i => {
         return i
