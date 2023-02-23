@@ -419,6 +419,11 @@ module.exports = {
                     children: genGatewaySidebar()
                 },
                 {
+                    title: '验证码服务',
+                    collapsible: true,
+                    children: genCaptchaSidebar()
+                },
+                {
                     title: '通知服务',
                     collapsible: true,
                     children: genNoticeSidebar()
@@ -940,6 +945,18 @@ function genMessageSidebar() {
         return i
     })
 }
+
+// 验证码服务
+function genCaptchaSidebar() {
+    const mapArr = [
+        '/technique/15_验证码服务/01_验证码架构.md',
+        '/technique/15_验证码服务/02_验证码集成.md'
+    ]
+    return mapArr.map(i => {
+        return i
+    })
+}
+
 
 // 网关服务
 function genGatewaySidebar() {
