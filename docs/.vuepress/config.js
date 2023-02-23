@@ -1150,8 +1150,8 @@ function genPlatformBusinessSidebar(type) {
             '/platform/business/14_数据中台/06_数据上报服务.md',
             '/platform/business/14_数据中台/09_数据集成服务.md',
             '/platform/business/14_数据中台/07_主数据管理服务.md',
-            '/platform/business/14_数据中台/08_数据开发服务.md'
-            // '/platform/business/14_数据中台/10_数据开放服务.md'
+            '/platform/business/14_数据中台/08_数据开发服务.md',
+            '/platform/business/14_数据中台/10_数据开放服务.md'
         ]
     } else if (type == 6) {
         mapArr = [

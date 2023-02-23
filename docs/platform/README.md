@@ -66,10 +66,11 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 | 1    | 运维监控 | 审计日志监控服务   | 完成 | [alinesno-cloud-logger][alinesno-cloud-logger]                     |      |
 | 2    |          | 应用监控预警服务   | 完成 | [alinesno-cloud-transfer][alinesno-cloud-transfer]                 |      |
 |      |          |                    |      |                                                                    |      |
-| 2    | 数据治理 | 数据上报服务       | 初稿 | [alinesno-cloud-data-report][alinesno-cloud-data-report]           |      |
-| 3    |          | 主数据管理服务     | 完成 | [alinesno-cloud-data-mdn][alinesno-cloud-data-mdn]                 |      |
-| 4    |          | 数据集成服务       | 完成 | [alinesno-cloud-data-etl][alinesno-cloud-data-etl]                 |      |
-| 5    |          | 数据开发服务       | 完成 | [alinesno-cloud-data-develop][alinesno-cloud-data-develop]         |      |
+| 1    | 数据治理 | 数据上报服务       | 初稿 | [alinesno-cloud-data-report][alinesno-cloud-data-report]           |      |
+| 2    |          | 主数据管理服务     | 完成 | [alinesno-cloud-data-mdn][alinesno-cloud-data-mdn]                 |      |
+| 3    |          | 数据集成服务       | 完成 | [alinesno-cloud-data-etl][alinesno-cloud-data-etl]                 |      |
+| 4    |          | 数据开发服务       | 完成 | [alinesno-cloud-data-develop][alinesno-cloud-data-develop]         |      |
+| 5    |          | 数据接口服务       | 完成 | [alinesno-cloud-data-security][alinesno-cloud-data-security]       |      |
 |      |          |                    |      |                                                                    |      |
 
 [devops]: ./paas/01_持续集成平台.md
@@ -96,6 +97,7 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 [alinesno-cloud-data-etl]: ./business/14_数据中台/09_数据集成服务.md
 [alinesno-cloud-data-develop]: ./business/14_数据中台/08_数据开发服务.md
 [alinesno-cloud-data-open]: ./business/14_数据中台/10_数据开放服务.md
+[alinesno-cloud-data-security]: ./business/14_数据中台/10_数据开放服务.md
 
 **相关产品使用和运营架构规划**:
 
