@@ -36,7 +36,7 @@ module.exports = {
     themeConfig: {
         logo: '/logo.png', // 注意图片放在 public 文件夹下
         lastUpdated: 'Last Updated',
-        sidebarDepth: 1,
+        sidebarDepth: 2,
         repo: 'https://github.com/alinesno-cloud/alinesno-cloud-platform-press',
         docsDir: 'docs',
         repoLabel: 'Github',
