@@ -5,7 +5,7 @@ module.exports = {
     base: '/',
     head: [
         ['link', { rel: 'icon', href: '/favicon.png' }],
-        ['link', { rel: 'stylesheet', href: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.11.2/css/all.css' }]
+        ['link', { rel: 'stylesheet', href: '/font-awesome-5.11.2/css/all.min.css' }]
     ],
     plugins: [
         ['@vuepress/active-header-links'],
