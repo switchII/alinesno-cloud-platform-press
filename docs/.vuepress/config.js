@@ -4,6 +4,7 @@ module.exports = {
     description: '能够灵活满足企业数字化建设中各种场景的需要，更高效、专注的沉淀业务和数据能力，进而形成企业的业务和数据中台。通过能力的灵活组合，快速的应对当前快节奏的市场需求，助力企业数字化转型的成功。',
     base: '/',
     head: [
+        ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
         ['link', { rel: 'icon', href: '/favicon.png' }],
         ['link', { rel: 'stylesheet', href: '/font-awesome-5.11.2/css/all.min.css' }]
     ],
