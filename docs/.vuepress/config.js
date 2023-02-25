@@ -591,16 +591,12 @@ function genFirestLearnSidebar(type) {
             '/firstlearn/02_学习成长中心.md',
             '/firstlearn/03_中台示例中心.md',
             '/firstlearn/18_持续集成入门.md',
-            '/firstlearn/04_中台设计视频.md',
             '/firstlearn/04_中台公开课.md',
+            '/firstlearn/04_中台设计视频.md',
             '/firstlearn/32_管理手册地图.md'
         ]
     } else if (type == 3) {
         mapArr = [
-            // '/firstlearn/10_快速入门.md',
-            // '/firstlearn/11_用户手册.md',
-            // '/firstlearn/12_课程培训.md',
-            // '/firstlearn/13_Demo案例.md'
             '/firstlearn/23_创建业务服务.md',
             '/firstlearn/24_配置开发权限.md',
             '/firstlearn/25_接口网关配置.md',
@@ -1075,9 +1071,8 @@ function genGroupDeptSidebar() {
 
 function genGroupRuleSidebar(type) {
     var mapArr = [
-        '/group/02_管理体系/02_管理概述.md',
-        '/group/02_管理体系/12_岗位职责.md',
         '/group/02_管理体系/19_能力模型.md',
+        '/group/02_管理体系/12_岗位职责.md',
         '/group/02_管理体系/03_入职流程.md',
         '/group/02_管理体系/08_培训体系.md',
         '/group/02_管理体系/05_成长梯度.md',
