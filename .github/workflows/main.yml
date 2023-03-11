@@ -76,22 +76,4 @@ jobs:
           tags: ${{ env.DOCKER_HUB_NAMESPACE }}/${{ env.PRO_NAME }}:${{ env.PRO_VERSION }}
           labels: ${{ steps.meta.outputs.labels }}
             # -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 部署到docker-hub _end >>>>>>>>>>>>>>>>>>>>>>>>>>
-            
-  qiniu-and-deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-
-      - name: 执行上传
-        uses: luochongfei/up2qn@master
-        with:
-          bucket: alinesno-cloud-platform-press  
-          zone: 华南 # 存储区域，按实际情况填写 备注1
-          access_key: ${{ secrets.AK }} # 七牛云 AccessKey 备注2
-          secret_key: ${{ secrets.SK }} # 七牛云 SecretKey 备注2
-          local_dir: web # 本地文件夹
-          local_exclude: "**/node_modules/**" # 要排除的内容，要符合 glob 格式
-          target_dir: / # 要上传到七牛云中的文件夹
+             
