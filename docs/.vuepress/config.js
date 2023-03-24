@@ -83,11 +83,7 @@ module.exports = {
             {
                 text: '产品服务',
                 link: '/prices/'
-            }, 
-            {
-                text: '产品动态',
-                link: '/discuz/'
-            },
+            },  
             {
                 text: '产品体验',
                 link: 'http://alinesno-saas.beta.linesno.com'
