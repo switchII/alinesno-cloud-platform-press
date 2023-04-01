@@ -1362,7 +1362,8 @@ function genFrameworkSidebar() {
         '/framework/essentials/06_平台运维架构.md',
         '/framework/essentials/08_网关架构设计.md',
         '/framework/essentials/09_持续集成设计.md',
-        '/framework/essentials/10_自动化测试架构.md'
+        '/framework/essentials/10_自动化测试架构.md',
+        '/framework/essentials/11_安全质量架构设计.md'
     ]
     return mapArr.map(i => {
         return i
