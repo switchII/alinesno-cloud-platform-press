@@ -83,7 +83,7 @@ module.exports = {
             {
                 text: '产品服务',
                 link: '/prices/'
-            },  
+            },
             {
                 text: '产品体验',
                 link: 'http://alinesno-saas.beta.linesno.com'
@@ -723,7 +723,8 @@ function genBaseSoftwareSidebar() {
         '/operation/16_sonar/01_Sonar安装.md',
         '/operation/33_docker/01_Docker在线安装.md',
         '/operation/11_zookeeper/01_Zookeeper单点安装.md',
-        '/operation/22_elk/04_elk单机版本安装.md'
+        '/operation/22_elk/04_elk单机版本安装.md',
+        '/operation/23_security/01_trivy安装.md'
     ]
     return mapArr.map(i => {
         return i
