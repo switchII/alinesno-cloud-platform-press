@@ -31,13 +31,26 @@ trivy -v
 Version: 0.16.0
 ```
 
+## 配置离线库
+
+由于内网还有网络等原因，下载的速度比较库，配置离线库，脚本如下:
+```sh
+cp /root/trivy-offline.db.tgz .cache/trivy/db/
+cd .cache/trivy/db/
+tar zxvf trivy-offline.db.tgz
+
+# ls
+metadata.json  trivy.db  trivy-offline.db.tgz
+rm trivy-offline.db.tgz
+```
+
+离线库github下载即可
+
 ## 验证
 
 ```sh
 trivy registry-vpc.cn-shenzhen.aliyuncs.com/alinesno-cloud-base/alinesno-cloud-data-assets-boot
 ```
-
-第一次扫描的时候，会下载数据库，过程会慢一些.
 
 ## 其它
 
