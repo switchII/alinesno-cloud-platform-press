@@ -453,6 +453,11 @@ module.exports = {
                     children: genDataSkillEnvSidebar()
                 },
                 {
+                    title: '数据总线服务',
+                    collapsible: true,
+                    children: genDataSkillBusSidebar()
+                },
+                {
                     title: '数据上报服务',
                     collapsible: true,
                     children: genDataSkillReportSidebar()
@@ -1708,6 +1713,22 @@ function genDataSkillEnvSidebar() {
     })
 
 }
+
+/**
+ * 数据总线
+ * @returns 
+ */
+function genDataSkillBusSidebar() {
+    const mapArr = [
+        '/dataskill/06_databus/01_数据采集总线架构.md',
+        '/dataskill/06_databus/02_数据采集总线集成.md'
+    ]
+    return mapArr.map(i => {
+        return i
+    })
+
+}
+
 
 function genDataSkillReportSidebar() {
     const mapArr = [
