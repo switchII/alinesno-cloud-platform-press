@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ${{ fromJSON('["ubuntu-latest", "self-hosted"]')[github.repository == 'github/docs-internal'] }}
     env:
       # 配置环境变量，包括镜像的名称，版本号，还有命名空间
       PRO_NAME: alinesno-platform-press
