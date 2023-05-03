@@ -5,7 +5,7 @@
        <img src="/aliyun-banner-bg.png" class="hero-bg-img" />
 
       <div class="hero-text-box" >
-        <span class="banner-title">全新一代企业数字平台
+        <span class="banner-title">全新一代企业数字中台
           <br>
           中小团队转型的新型基础设施
         </span>
@@ -50,7 +50,7 @@
     <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto">
       <div class="container text-center td-arrow-down">
         <span class="h4 mb-0">
-          <h3>数字平台服务 ACP产品优势</h3>
+          <h3>数字中台服务 ACP产品优势</h3>
           <p>
             ACP中台服务（Alinesno Cloud Platform）是业务应用生命周期管理和监控的新一代中台， 为业务发展提供
             基础的数字化架构 ，业务规范化和标准化，更好的沉淀企业业务资产和数据资产,形成行业的业务标准和 团队的一套解决方案，形成自己的核心竞争力
@@ -146,7 +146,7 @@ export default {
   },
   data() {
     return {
-      title: '全新一代企业数字平台',
+      title: '全新一代企业数字中台',
       saasTitle: 'ACP数字化平台',
       saasUrl: 'http://v212.ui.saas.dev.lbxinhu.linesno.com:23456/',
       platformFeature:[
@@ -175,7 +175,7 @@ export default {
           icon: 'fas fa-laptop-code'
         },
         {
-          title: '快速实现数字平台和业务集成',
+          title: '快速实现数字中台和业务集成',
           details:
             '基于中台体系和工具，快速集成业务体系的管理体系，提供业务建设需要的平台化能力和稳定的开发框架，使业务快速整合',
           icon: 'fab fa-pinterest-square'
@@ -189,7 +189,7 @@ export default {
       ],
       functionAll: [
         {
-          title: '完善的数字平台体系',
+          title: '完善的数字中台体系',
           details:
             '包含平台化、中台化、保障体系，支持技术、研发、标准、数据、运营一体化的中台建设体系，业务应用生命周期管理和监控的新一代中台。',
           icon: 'fab fa-angular'
@@ -229,7 +229,7 @@ export default {
         {
           title: '一套技术研发基础框架和方法',
           details:
-            '为企业基础架构和统一研发云平台，为企业提供统一研发平台， 代码生成器开发平台。整体平台从规范、组织、架构-、业务、持续集成、自动化、在线升级全方位企业级数字平台研发解决方案',
+            '为企业基础架构和统一研发云平台，为企业提供统一研发平台， 代码生成器开发平台。整体平台从规范、组织、架构-、业务、持续集成、自动化、在线升级全方位企业级数字中台研发解决方案',
           icon: 'fas fa-feather'
         },
         {
