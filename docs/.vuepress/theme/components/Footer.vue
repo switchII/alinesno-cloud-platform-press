@@ -83,7 +83,7 @@
           <!--<p class="footer-text-product"><i class="iconfont icon-dianhua1"></i> 18774035187</p>-->
           <p class="footer-text-product">
             <i class="iconfont icon-weizhi1"> </i>
-            南宁市南宁市良庆区凯旋路15号8栋28层
+            南宁市良庆区盘歌路4号碧园大厦b座19楼
           </p>
           <p class="footer-title" style="margin-top: 40px">付款方式</p>
           <p class="footer-text-product" style="padding-top: 10px">
@@ -122,8 +122,8 @@
   width: 100%;
 
   .container {
-    width: 95%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 90%;
     margin: auto;
 
     .footer-row {

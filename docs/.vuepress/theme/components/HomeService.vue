@@ -72,7 +72,7 @@ export default {
         {
           name: "业务结合数据指导",
           icon: "fas fa-laptop-code",
-          desc: "结合数字中台能力，业务建设集成，数据采集抽取计算整合解决方案指导",
+          desc: "结合数字平台能力，业务建设集成，数据采集抽取计算整合解决方案指导",
         },
         {
           name: "企业定制化服务",
@@ -91,7 +91,7 @@ export default {
 }
 
 .wb-zc-ybmod-brand-mod2-pc .module-wrap {
-  min-width: 1200px;
+  min-width: 90%;
   background-color: #fff;
   padding-top: 28px;
   padding-bottom: 80px;
@@ -103,7 +103,7 @@ export default {
 
   .col {
     list-style: none;
-    width: 1200px;
+    width: 90%;
     margin: 0 auto;
 
     .colli {

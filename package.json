@@ -1,7 +1,7 @@
 {
     "name": "alinesno-cloud-platform-press",
     "version": "2.1.3-Alpha",
-    "description": "ACP数字中台产品总体设计稿",
+    "description": "ACP数字平台产品总体设计稿",
     "main": "index.js",
     "author": "LuoXiaoDong",
     "license": "GPLv3",

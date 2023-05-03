@@ -1,6 +1,29 @@
 <template>
   <div class="home">
+    <div class="hero hero-platform ">
 
+       <img src="/aliyun-banner-bg.png" class="hero-bg-img" />
+
+      <div class="hero-text-box" >
+        <span class="banner-title">全新一代企业数字平台
+          <br>
+          中小团队转型的新型基础设施
+        </span>
+        <p class="action">
+          <NavLink class="action-button link-action" style="" :item="actionLink" />
+        </p>
+      </div>
+      <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto feature-box" >
+          <ul >
+            <li  v-for="(item , index) in platformFeature" :key="index">
+              <div class="item-title"> {{ item.title}}</div>
+              <div class="item-desc"> {{ item.desc }}</div>
+            </li>
+          </ul>
+      </section>
+    </div>
+
+    <!--
     <div class="hero">
       <img
         v-if="data.heroImage"
@@ -20,12 +43,14 @@
           :item="actionLink"
         />
       </p>
-    </div>
+    </div> 
+      -->
+
 
     <section class="row td-box td-box--primary position-relative td-box--gradient td-box--height-auto">
       <div class="container text-center td-arrow-down">
         <span class="h4 mb-0">
-          <h3>数字中台服务 ACP产品优势</h3>
+          <h3>数字平台服务 ACP产品优势</h3>
           <p>
             ACP中台服务（Alinesno Cloud Platform）是业务应用生命周期管理和监控的新一代中台， 为业务发展提供
             基础的数字化架构 ，业务规范化和标准化，更好的沉淀企业业务资产和数据资产,形成行业的业务标准和 团队的一套解决方案，形成自己的核心竞争力
@@ -115,15 +140,33 @@ import NavLink from '@parent-theme/components/NavLink.vue'
 
 export default {
   components: {
-    NavLink ,
+    NavLink,
     HomeService,
     FooterTemp
   },
   data() {
     return {
-      title: '全新一代企业数字中台',
+      title: '全新一代企业数字平台',
       saasTitle: 'ACP数字化平台',
       saasUrl: 'http://v212.ui.saas.dev.lbxinhu.linesno.com:23456/',
+      platformFeature:[
+        {
+          title: '一体化基础服务能力集成' , 
+          desc: '集成统一的管理门户和应用生命周期管理' , 
+        },
+        {
+          title: '集成标准的技术框架和手册' , 
+          desc: '统一规范管理和DevOps技术研发流程' , 
+        },
+        {
+          title: '轻量级数据治理和运营标准' , 
+          desc: '针对于中小型项目轻量级的数据运营治理' , 
+        },
+        {
+          title: '基于k8S容器云平台运维治理' , 
+          desc: '集成自动化运维和针对容器化进行运营管理' , 
+        }
+      ] ,
       helpAll: [
         {
           title: '开箱即用的ACP中台系统',
@@ -132,7 +175,7 @@ export default {
           icon: 'fas fa-laptop-code'
         },
         {
-          title: '快速实现数字中台和业务集成',
+          title: '快速实现数字平台和业务集成',
           details:
             '基于中台体系和工具，快速集成业务体系的管理体系，提供业务建设需要的平台化能力和稳定的开发框架，使业务快速整合',
           icon: 'fab fa-pinterest-square'
@@ -146,7 +189,7 @@ export default {
       ],
       functionAll: [
         {
-          title: '完善的数字中台体系',
+          title: '完善的数字平台体系',
           details:
             '包含平台化、中台化、保障体系，支持技术、研发、标准、数据、运营一体化的中台建设体系，业务应用生命周期管理和监控的新一代中台。',
           icon: 'fab fa-angular'
@@ -186,7 +229,7 @@ export default {
         {
           title: '一套技术研发基础框架和方法',
           details:
-            '为企业基础架构和统一研发云平台，为企业提供统一研发平台， 代码生成器开发平台。整体平台从规范、组织、架构-、业务、持续集成、自动化、在线升级全方位企业级数字中台研发解决方案',
+            '为企业基础架构和统一研发云平台，为企业提供统一研发平台， 代码生成器开发平台。整体平台从规范、组织、架构-、业务、持续集成、自动化、在线升级全方位企业级数字平台研发解决方案',
           icon: 'fas fa-feather'
         },
         {
@@ -309,7 +352,7 @@ export default {
     justify-content: space-between;
     text-align: center;
     background-color: #f7fbfd;
-    max-width: 1200px;
+    max-width: 90%;
     margin: auto;
   }
 
@@ -357,7 +400,7 @@ export default {
   }
 
   ul {
-    max-width: 1200px;
+    max-width: 90%;
     width: 100%;
     margin: auto;
     padding: 0px;
