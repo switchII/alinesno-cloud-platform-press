@@ -2,7 +2,7 @@
   "index_name": "acp_linesno",
   "start_urls": [
     {
-      "url": "https://alinesno-platform.linesno.com/",
+      "url": "http://alinesno-platform.linesno.com/",
       "selectors_key": "v2",
       "tags": [
         "v2"
