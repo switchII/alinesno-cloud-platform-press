@@ -71,7 +71,7 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 | 3    |          | 容器云管理服务      | 研发中 | [alinesno-cloud-kube-platform](#)                                  | 编写中   |
 | 4    |          | 分布式配置中心服务  | 研发中 | [alinesno-cloud-distconfig](#)                                     | 编写中   |
 | 5    |          | 自动化操作服务      | 研发中 | [alinesno-cloud-operation](#)                                      | 编写中   |
-| 6    |          | 一体化案例感触服务  | 研发中 | [alinesno-cloud-security](#)                                       | 编写中   |
+| 6    |          | 一体化安全感知服务  | 研发中 | [alinesno-cloud-security](#)                                       | 编写中   |
 |      |          |                     |        |                                                                    |          |
 | 1    | 数据治理 | 数据上报服务        | 完成   | [alinesno-cloud-data-integral][alinesno-cloud-data-report]         |          |
 | 2    |          | 数据总线服务        | 完成   | [alinesno-cloud-data-bus](#)                                       | 编写中   |
