@@ -80,7 +80,7 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 | 5    |          | 数据集成服务        | 优化中 | [alinesno-cloud-data-etl][alinesno-cloud-data-etl]                 |          |
 | 6    |          | 数据开发服务        | 完成   | [alinesno-cloud-data-develop][alinesno-cloud-data-develop]         |          |
 | 7    |          | 实时计算服务(Flink) | 研发中 | [alinesno-cloud-data-flink](#)                                     | 编写中   |
-| 8    |          | 数据接口服务        | 完成   | [alinesno-cloud-data-security][alinesno-cloud-data-security]       | 编写中   |
+| 8    |          | 数据安全网关        | 完成   | [alinesno-cloud-data-security][alinesno-cloud-data-security]       | 编写中   |
 |      |          |                     |        |                                                                    |          |
 
 [devops]: ./paas/01_持续集成平台.md
