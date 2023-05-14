@@ -476,7 +476,12 @@ module.exports = {
                     title: '数据开发服务',
                     collapsible: true,
                     children: genDataSkillDevSidebar()
-                }
+                },
+                {
+                    title: '数据安全网关',
+                    collapsible: true,
+                    children: genDataSecuritySidebar()
+                },
             ],
             '/learn/': [
                 {
@@ -1747,6 +1752,19 @@ function genDataIntegrationSidebar() {
         '/dataskill/03_dataintegration/01_数据集成架构.md',
         '/dataskill/03_dataintegration/02_当前集成功能.md',
         '/dataskill/03_dataintegration/03_数据采集示例.md'
+    ]
+    return mapArr.map(i => {
+        return i
+    })
+
+}
+
+function genDataSecuritySidebar() {
+    const mapArr = [
+        '/dataskill/07_datasecurity/01_数据安全管理.md',
+        '/dataskill/07_datasecurity/02_数据接口路由配置.md',
+        '/dataskill/07_datasecurity/03_客户端配置与注册.md',
+        '/dataskill/07_datasecurity/04_负载均衡管理.md'
     ]
     return mapArr.map(i => {
         return i

@@ -10,7 +10,7 @@ ETL(extract 提取、transform 转换、load 加载)。ETL 负责将分散的、
 
 ### ETL 架构图
 
-<img :src="$withBase('/data/etl.png')" style="zoom:35%">
+<img :src="$withBase('/data/etl.png')" >
 
 
 ### 数据清洗
