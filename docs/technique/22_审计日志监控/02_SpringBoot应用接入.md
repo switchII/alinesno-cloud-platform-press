@@ -83,7 +83,7 @@ alinesno:
 容器发布指定发布日志，例如K8S发布中配置如下:
 ```yml
 - name: JAVA_TOOL_OPTIONS
-  value: '-Xms128m -Xmx512m -Dspring.profiles.active=test -Dlogging.config=classpath:logback/logback-spring.xml'
+  value: '-Dlogging.config=classpath:logback/logback-spring.xml' # 增加指定日志文件
 ```
 
 完善代码请查看示例文件[示例][logback-spring]
