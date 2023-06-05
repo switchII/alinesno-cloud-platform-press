@@ -26,32 +26,58 @@
 </dependency>
 ```
 
-这里接入当前为支持kafka接入，配置替换掉springboot的日志服务即可，主要配置说明，
+这里接入当前为支持kafka接入，配置替换掉springboot的日志服务即可，主要配置说明，然后在yaml文件中添加以下配置:
+
+```yaml
+alinesno:
+  watcher:
+    userKey: 从日志中心中获取
+    kafka:
+      kafkaHosts: Kafka地址
+```
+
 这里主要是配置kafka地址即可
 
 ```xml
-<springProperty scope="context" name="watcher.appName" source="spring.application.name"/>
-<springProperty scope="context" name="watcher.env" source="spring.profiles.active"/>
-<springProperty scope="context" name="watcher.userKey" source="alinesno.watcher.userKey"/>
-
- <!-- 使用kafka队列配置 -->
-<appender name="ALINESNO-CLOUD-WATCHER" class="com.alinesno.cloud.watcher.logback.appender.KafkaAppender">
-    <appName>${watcher.appName}</appName>
-
-    <!-- 这里配置kafka的接入地址-->
-    <kafkaHosts>192.168.1.1:9092</kafkaHosts>
-
-    <!-- 环境 -->
-    <env>${watcher.env}</env>
-
-    <!-- 接入密钥 -->
-    <userKey>${watcher.userKey}</userKey>
-</appender>
-
-<root level="INFO">
-    <!-- 添加appender -->
-    <appender-ref ref="ALINESNO-CLOUD-WATCHER"/>
-</root>
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
+    <property name="LOG_HOME" value="/log" />
+    <!-- 控制台输出 -->
+    <!-- 彩色日志 -->
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    <conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+    <conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+    <!-- 彩色日志格式 -->
+    <property name="CONSOLE_LOG_PATTERN" value="${CONSOLE_LOG_PATTERN:-%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>${CONSOLE_LOG_PATTERN}</Pattern>
+            <!-- 设置字符集 -->
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    
+    <springProperty scope="context" name="watcher.appName" source="spring.application.name"/>
+    <springProperty scope="context" name="watcher.kafkaHosts" source="alinesno.watcher.kafka.kafkaHosts"/>
+    <springProperty scope="context" name="watcher.env" source="spring.profiles.active"/>
+    <springProperty scope="context" name="watcher.userKey" source="alinesno.watcher.userKey"/>
+    
+    <!-- 使用kafka队列配置 -->
+    <appender name="ALINESNO-CLOUD-WATCHER" class="com.alinesno.cloud.watcher.logback.appender.KafkaAppender">
+        <appName>${watcher.appName}</appName>
+        <kafkaHosts>${watcher.kafkaHosts}</kafkaHosts>
+        <env>${watcher.env}</env>
+        <userKey>${watcher.userKey}</userKey>
+    </appender>
+    
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="ALINESNO-CLOUD-WATCHER"/>
+    </root>
+    
+</configuration>
 ```
 
 容器发布指定发布日志，例如K8S发布中配置如下:
