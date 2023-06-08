@@ -66,21 +66,21 @@ ACP数字中台服务, 研发中台产品体系架构规划和设计，为完成
 | 7    |          | 存储管理服务        | 完成   | [alinesno-cloud-base-storage][alinesno-cloud-base-storage]         |          |
 | 8    |          | 单点登陆管理服务    | 完成   | [alinesno-cloud-platform-sso][alinesno-cloud-platform-sso]         |          |
 |      |          |                     |        |                                                                    |          |
-| 1    | 运维治理 | 审计日志监控服务    | 完成   | [alinesno-cloud-logger][alinesno-cloud-logger]                     |          |
-| 2    |          | 应用监控预警服务    | 完成   | [alinesno-cloud-transfer][alinesno-cloud-transfer]                 |          |
-| 3    |          | 容器云管理服务      | 研发中 | [alinesno-cloud-kube-platform](#)                                  | 编写中   |
-| 4    |          | 分布式配置中心服务  | 研发中 | [alinesno-cloud-distconfig](#)                                     | 编写中   |
-| 5    |          | 自动化操作服务      | 研发中 | [alinesno-cloud-operation](#)                                      | 编写中   |
-| 6    |          | 一体化安全感知服务  | 研发中 | [alinesno-cloud-security](#)                                       | 编写中   |
+| 1    | 运维治理 | 审计日志监控服务    | 完成   | [alinesno-cloud-logger][alinesno-cloud-logger]                     |          | 
+| 2    |          | 容器云管理服务      | 研发中 | [alinesno-cloud-kube-platform](#)                                  | 编写中   |
+| 3    |          | 分布式配置中心服务  | 内测中 | [alinesno-cloud-distconfig](#)                                     | 编写中   |
+| 4    |          | 自动化操作服务      | 内测中 | [alinesno-cloud-operation](#)                                      | 编写中   |
+| 5    |          | 一体化安全感知服务  | 研发中 | [alinesno-cloud-security](#)                                       | 编写中   |
 |      |          |                     |        |                                                                    |          |
 | 1    | 数据治理 | 数据上报服务        | 完成   | [alinesno-cloud-data-integral][alinesno-cloud-data-report]         |          |
 | 2    |          | 数据总线服务        | 完成   | [alinesno-cloud-data-bus](#)                                       | 编写中   |
 | 3    |          | 数据资产服务        | 研发中 | [alinesno-cloud-data-assets](#)                                    | 编写中   |
 | 4    |          | 主数据管理服务      | 完成   | [alinesno-cloud-data-mdn][alinesno-cloud-data-mdn]                 |          |
-| 5    |          | 数据集成服务        | 优化中 | [alinesno-cloud-data-etl][alinesno-cloud-data-etl]                 |          |
+| 5    |          | 数据集成服务        | 完成 | [alinesno-cloud-data-etl][alinesno-cloud-data-etl]                 |          |
 | 6    |          | 数据开发服务        | 完成   | [alinesno-cloud-data-develop][alinesno-cloud-data-develop]         |          |
 | 7    |          | 实时计算服务(Flink) | 研发中 | [alinesno-cloud-data-flink](#)                                     | 编写中   |
 | 8    |          | 数据安全网关        | 完成   | [alinesno-cloud-data-security][alinesno-cloud-data-security]       | 编写中   |
+| 9    |          | 数据接口服务        | 内测中   | [alinesno-cloud-data-magic][#]       | 编写中   |
 |      |          |                     |        |                                                                    |          |
 
 [devops]: ./paas/01_持续集成平台.md
