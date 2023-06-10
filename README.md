@@ -145,5 +145,6 @@ ACP数字中台，用于数字化平台中台的搭建学习交流群，用于�
 - 文档参考改造[vue-element-admin](mybatis-plus)
 - 项目文档参考改造[software-engineering-document](software-engineering-document)
 - 数据网关工程[flying-fish-gateway](https://gitee.com/omsgit/flying-fish-gateway)
+- 前端日志采集[logjs](logjs)
 - ...
 
