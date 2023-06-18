@@ -5,7 +5,8 @@
        <img src="/aliyun-banner-bg.png" class="hero-bg-img" />
 
       <div class="hero-text-box" >
-        <span class="banner-title">全新一代企业数字中台
+        <span class="banner-title">
+          利用ACP构筑业务、构建应用并实现数字转型
           <br>
           中小团队转型的新型基础设施
         </span>
