@@ -38,4 +38,33 @@ jobs:
         env:
           NODE_OPTIONS: "--max-old-space-size=8192"
         run: npm run docs:build
+
+      # upload to github
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          # 部署到 gh-pages 分支
+          target_branch: gh-pages
+          # 部署目录为 VuePress 的默认输出目录
+          build_dir: docs/.vuepress/dist
+        env:
+          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 部署到docker-hub _start >>>>>>>>>>>>>>>>>>>>>>>>>> 
+      - name: Build && Push DockerHub
+        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        with:
+          context: .
+          push: false
+          tags: ${{ env.DOCKER_HUB_NAMESPACE }}/${{ env.PRO_NAME }}:${{ env.PRO_VERSION }}
+          labels: ${{ steps.meta.outputs.labels }}
+      # -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 部署到docker-hub _end >>>>>>>>>>>>>>>>>>>>>>>>>>
+
+      - name: Run Docker script file
+        run: |
+            docker rm -f ${{ env.PRO_NAME }}
+            docker pull ${{ env.DOCKER_HUB_NAMESPACE }}/${{ env.PRO_NAME }}:${{ env.PRO_VERSION }}
+            docker run -p ${{ env.EXPOSE_PORT }}:80 --name ${{ env.PRO_NAME }} --restart="always" -d ${{ env.DOCKER_HUB_NAMESPACE }}/${{ env.PRO_NAME }}:${{ env.PRO_VERSION }}
+        shell: bash
       # -->>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 部署到docker-hub _end >>>>>>>>>>>>>>>>>>>>>>>>>>
