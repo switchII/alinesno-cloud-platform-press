@@ -63,6 +63,9 @@ alinesno:
     <springProperty scope="context" name="watcher.kafkaHosts" source="alinesno.watcher.kafka.kafkaHosts"/>
     <springProperty scope="context" name="watcher.env" source="spring.profiles.active"/>
     <springProperty scope="context" name="watcher.userKey" source="alinesno.watcher.userKey"/>
+  
+    <!-- log configure -->
+	  <logger name="com.alinesno.cloud" level="DEBUG" />
     
     <!-- 使用kafka队列配置 -->
     <appender name="ALINESNO-CLOUD-WATCHER" class="com.alinesno.cloud.watcher.logback.appender.KafkaAppender">
