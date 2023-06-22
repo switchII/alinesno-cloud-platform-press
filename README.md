@@ -147,6 +147,6 @@ ACP数字中台，用于数字化平台中台的搭建学习交流群，用于�
 - 数据网关工程[flying-fish-gateway](https://gitee.com/omsgit/flying-fish-gateway)
 - 前端日志采集[logjs](logjs)
 - 数据接口服务[magic-api](magic-api)
-- FlinkSQL实时计算服务[flink-streaming-platform-web]([magic-api](https://gitee.com/zhuhuipei/flink-streaming-platform-web)https://gitee.com/zhuhuipei/flink-streaming-platform-web)
+- FlinkSQL实时计算服务[flink-streaming-platform-web](https://gitee.com/zhuhuipei/flink-streaming-platform-web) 
 - ...
 
