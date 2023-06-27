@@ -439,6 +439,11 @@ module.exports = {
                     title: '预警监控',
                     collapsible: true,
                     children: genTransferDevopsSidebar()
+                },
+                {
+                    title: '配置中心',
+                    collapsible: true,
+                    children: genConfigCenterSidebar()
                 }
             ],
             '/dataskill/': [
@@ -1836,6 +1841,20 @@ function genTransferDevopsSidebar() {
         '/technique/23_应用监控预警服务/02_配置预警接入端.md',
         '/technique/23_应用监控预警服务/04_集成第三方移动预警通知.md',
         '/technique/23_应用监控预警服务/05_预警服务与业务集成.md'
+    ]
+
+    return mapArr.map(i => {
+        return i
+    })
+}
+
+/**
+* 配置中心
+*/
+function genConfigCenterSidebar() {
+    const mapArr = [
+        '/technique/24_配置中心/配置管理服务.md',
+        '/technique/24_配置中心/接入配置中心.md',
     ]
 
     return mapArr.map(i => {
