@@ -1,3 +1,5 @@
+<p>此为旧版本，不再维护，新版本基线转移至组织[<a href="https://gitee.com/alinesno-infrastructure">alinesno-infrastructure</a>]维护</p>
+
 # ACP数字中台
 
 > 本基线主要为了学习交流学习使用，部分图片为网上获取，如有侵权，请说明
