@@ -32,7 +32,7 @@ jobs:
           node-version: '16.13.1'
 
       - name: Install Dependencies
-        run: npm i
+        run: npm install && yarn docs:build
 
       # 部署到 GitHub Pages
       - name: Deploy
