@@ -78,7 +78,7 @@
           <p class="footer-title">联系方式</p>
           <p class="footer-text-product" style="padding-top: 10px">
             <i class="iconfont icon-dianhua1"> </i>
-            15578942583
+            luoandon#gmail.com
           </p>
           <!--<p class="footer-text-product"><i class="iconfont icon-dianhua1"></i> 18774035187</p>-->
           <p class="footer-text-product">
